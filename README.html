@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h1 id="refforts">Refforts</h1>
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+<p>The Refforts package is intended to provide scripts for analyzing the EFForTS model suite. In particular, EFForTS-ABM and EFForTS-LGraf.</p>
+<h2 id="installation">Installation</h2>
+<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;nldoc/Refforts&quot;</span>)</span></code></pre></div>
+<h2 id="functionality">Functionality:</h2>
+<p>A list of default EFForTS-ABM parameters can be reported with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">get.abm.defaults</span>()</span></code></pre></div>
+<p>A vector of global metrics, patches metrics and a list of turtles metrics</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">get.abm.metrics</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">get.abm.metrics.patches</span>()</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="kw">get.abm.metrics.turtles</span>()</span></code></pre></div>
+<h2 id="using-functions-with-nlrx">Using functions with nlrx</h2>
+<h4 id="example-1-simple-example">Example 1: Simple example</h4>
+<p>Here we just run a simple scenario with nlrx. So first we set up our nl object</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">library</span>(nlrx)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>netlogopath &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;C:/Program Files/NetLogo 6.1.0&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>modelpath &lt;-<span class="st"> &quot;01_EFForTS-ABM/EFForTS-ABM.nlogo&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>outpath &lt;-<span class="st"> &quot;03_Analyses/&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>nl &lt;-<span class="st"> </span><span class="kw">nl</span>(<span class="dt">nlversion =</span> <span class="st">&quot;6.1.0&quot;</span>,</span>
+<span id="cb4-8"><a href="#cb4-8"></a>         <span class="dt">nlpath =</span> netlogopath,</span>
+<span id="cb4-9"><a href="#cb4-9"></a>         <span class="dt">modelpath =</span> modelpath,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>         <span class="dt">jvmmem =</span> <span class="dv">1024</span>)</span></code></pre></div>
+<p>Then, we use the functions of the Refforts package to define the parameters of the experiment:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>nl<span class="op">@</span>experiment &lt;-<span class="st"> </span><span class="kw">experiment</span>(<span class="dt">expname=</span><span class="st">&quot;invest&quot;</span>,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>                            <span class="dt">outpath=</span>outpath,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>                            <span class="dt">repetition=</span><span class="dv">1</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                            <span class="dt">tickmetrics=</span><span class="st">&quot;true&quot;</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>                            <span class="dt">idsetup=</span><span class="st">&quot;setup-with-external-maps&quot;</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>                            <span class="dt">idgo=</span><span class="st">&quot;go&quot;</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>                            <span class="dt">runtime=</span><span class="dv">50</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>                            <span class="dt">metrics=</span><span class="kw">get.abm.metrics</span>(),</span>
+<span id="cb5-9"><a href="#cb5-9"></a>                            <span class="dt">constants =</span> <span class="kw">get.abm.defaults</span>())</span></code></pre></div>
+<p>Now we can use the other utility functions to change the default settings and transfer parameters from the constants to the variables slot:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.constant</span>(nl, <span class="st">&quot;price_scenario&quot;</span>, <span class="st">&quot;constant_prices&quot;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(nl, <span class="dt">varname =</span> <span class="st">&quot;LUT-0-price&quot;</span>, <span class="dt">min =</span> <span class="dv">100</span>, <span class="dt">max =</span> <span class="dv">1000</span>, <span class="dt">qfun =</span> <span class="st">&quot;qunif&quot;</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(nl, <span class="dt">varname =</span> <span class="st">&quot;LUT-1-price&quot;</span>, <span class="dt">min =</span> <span class="dv">500</span>, <span class="dt">max =</span> <span class="dv">5000</span>, <span class="dt">qfun =</span> <span class="st">&quot;qunif&quot;</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">## Add a latin hypercube simdesign:</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>nl<span class="op">@</span>simdesign &lt;-<span class="st"> </span><span class="kw">simdesign_lhs</span>(nl, <span class="dt">samples=</span><span class="dv">100</span>, <span class="dt">nseeds =</span> <span class="dv">1</span>)</span></code></pre></div>
+<h4 id="example-2-landmarket-labor-analysis-setup">Example 2: Landmarket labor analysis setup</h4>
+<p>We use the same setup as in Example 1:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">library</span>(nlrx)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>netlogopath &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;C:/Program Files/NetLogo 6.1.0&quot;</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>modelpath &lt;-<span class="st"> &quot;01_EFForTS-ABM/EFForTS-ABM.nlogo&quot;</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>outpath &lt;-<span class="st"> &quot;03_Analyses/&quot;</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>nl &lt;-<span class="st"> </span><span class="kw">nl</span>(<span class="dt">nlversion =</span> <span class="st">&quot;6.1.0&quot;</span>,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>         <span class="dt">nlpath =</span> netlogopath,</span>
+<span id="cb7-9"><a href="#cb7-9"></a>         <span class="dt">modelpath =</span> modelpath,</span>
+<span id="cb7-10"><a href="#cb7-10"></a>         <span class="dt">jvmmem =</span> <span class="dv">1024</span>)</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a>nl<span class="op">@</span>experiment &lt;-<span class="st"> </span><span class="kw">experiment</span>(<span class="dt">expname=</span><span class="st">&quot;invest&quot;</span>,</span>
+<span id="cb7-13"><a href="#cb7-13"></a>                            <span class="dt">outpath=</span>outpath,</span>
+<span id="cb7-14"><a href="#cb7-14"></a>                            <span class="dt">repetition=</span><span class="dv">1</span>,</span>
+<span id="cb7-15"><a href="#cb7-15"></a>                            <span class="dt">tickmetrics=</span><span class="st">&quot;true&quot;</span>,</span>
+<span id="cb7-16"><a href="#cb7-16"></a>                            <span class="dt">idsetup=</span><span class="st">&quot;setup-with-external-maps&quot;</span>,</span>
+<span id="cb7-17"><a href="#cb7-17"></a>                            <span class="dt">idgo=</span><span class="st">&quot;go&quot;</span>,</span>
+<span id="cb7-18"><a href="#cb7-18"></a>                            <span class="dt">runtime=</span><span class="dv">50</span>,</span>
+<span id="cb7-19"><a href="#cb7-19"></a>                            <span class="dt">metrics=</span><span class="kw">get.abm.metrics</span>(),</span>
+<span id="cb7-20"><a href="#cb7-20"></a>                            <span class="dt">constants =</span> <span class="kw">get.abm.defaults</span>())</span></code></pre></div>
+<p>Then we define variable vectors for a dstinct simulation design:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">### now we might want to move a parameter from const to variable:</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(<span class="dt">nl =</span> nl, </span>
+<span id="cb8-3"><a href="#cb8-3"></a>                      <span class="dt">varname =</span> <span class="st">&quot;LUT-0-folder&quot;</span>, </span>
+<span id="cb8-4"><a href="#cb8-4"></a>                      <span class="dt">values =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">oilpalm_labor_min</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">oilpalm_labor_med</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">oilpalm_labor_high</span><span class="ch">\&quot;</span><span class="st">&quot;</span>), <span class="dv">2</span>))</span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(<span class="dt">nl =</span> nl, </span>
+<span id="cb8-7"><a href="#cb8-7"></a>                      <span class="dt">varname =</span> <span class="st">&quot;LUT-1-folder&quot;</span>, </span>
+<span id="cb8-8"><a href="#cb8-8"></a>                      <span class="dt">values =</span> <span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">rubber_labor_min</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">rubber_labor_med</span><span class="ch">\&quot;</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">rubber_labor_high</span><span class="ch">\&quot;</span><span class="st">&quot;</span>), <span class="dv">2</span>))</span>
+<span id="cb8-9"><a href="#cb8-9"></a></span>
+<span id="cb8-10"><a href="#cb8-10"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(<span class="dt">nl =</span> nl, </span>
+<span id="cb8-11"><a href="#cb8-11"></a>                      <span class="dt">varname =</span> <span class="st">&quot;historical_smoothing&quot;</span>, </span>
+<span id="cb8-12"><a href="#cb8-12"></a>                      <span class="dt">values =</span> <span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">3</span>), <span class="kw">rep</span>(<span class="dv">3</span>, <span class="dv">3</span>)))</span></code></pre></div>
+<p>We can then run and store everything:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>nl<span class="op">@</span>simdesign &lt;-<span class="st"> </span><span class="kw">simdesign_distinct</span>(<span class="dt">nl =</span> nl, <span class="dt">nseeds =</span> <span class="dv">1</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co">## Run simulations:</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="kw">library</span>(future)</span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="kw">plan</span>(multisession)</span>
+<span id="cb9-6"><a href="#cb9-6"></a>results &lt;-<span class="st"> </span><span class="kw">run_nl_all</span>(nl, <span class="dt">split=</span><span class="dv">6</span>)</span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">## Attach output:</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="kw">setsim</span>(nl, <span class="st">&quot;simoutput&quot;</span>) &lt;-<span class="st"> </span>results</span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="kw">saveRDS</span>(nl, <span class="dt">file =</span> <span class="kw">file.path</span>(outpath, <span class="st">&quot;sims_wages_smoothing.rds&quot;</span>))</span></code></pre></div>
+<h4 id="example-3-update-parameter-files">Example 3: Update parameter files</h4>
+<p>Finally, the package is useful to update the parameters of EFForTS-ABM that are hidden in parameterfiles.</p>
+<p>First, we might want to scan our parameter folder for existing specifications:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>parfiles &lt;-<span class="st"> </span><span class="kw">get.abm.parfiles</span>(nl<span class="op">@</span>modelpath)</span></code></pre></div>
+<p>But we can also add new parameterfiles:</p>
+<p>We first load a skeleton of a main parameter file with <code>get.abm.main.default()</code>. We can also load a management skeleton with n different managements with <code>get.abm.management.default()</code>. We can then change the entries in the list to our needs. For example, here we decrease the wages for management 1 and increase the maximum age of this crop. Finally, we write the new parameter sets as a new subfolder into our EFForTS-ABM directory.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>abmfolder &lt;-<span class="st"> </span>nl<span class="op">@</span>modelpath</span>
+<span id="cb11-2"><a href="#cb11-2"></a>main &lt;-<span class="st"> </span><span class="kw">get.abm.main.default</span>(<span class="dt">crop =</span> <span class="st">&quot;oilpalm&quot;</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a>management &lt;-<span class="st"> </span><span class="kw">get.abm.management.default</span>(<span class="dt">crop=</span><span class="st">&quot;oilpalm&quot;</span>, <span class="dt">n=</span><span class="dv">2</span>)</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co"># increase max age of crop in main:</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>main[[<span class="st">&quot;max_age&quot;</span>]] &lt;-<span class="st"> </span><span class="dv">30</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="co"># increase wages of management 0:</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>management[[<span class="dv">1</span>]][[<span class="st">&quot;wages&quot;</span>]] &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="co"># Write to abmfolder:</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>param.set.name &lt;-<span class="st"> &quot;new_params&quot;</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="kw">set.abm.parfiles</span>(abmfolder, param.set.name, main, management, <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<h4 id="example-4-write-parameter-files-dynamically-and-run-a-full-nlrx-experiment">Example 4: Write parameter files dynamically and run a full nlrx experiment</h4>
+<p>This is a small use case to illustrate how this package can be used to run dynamic experiments with EFForTS-ABM.</p>
+<p>We want to simulate two different crops: oilpalm, and rubber. So we need to parameter folders to do that. However, we don<code>t want to use the default parameterisations, but we want to simulate a gradient of labor costs. We can use the wages parameter of the management file to achieve that. Let</code>s simulate a gradient from 1 to 2 with steps of 0.1.</p>
+<p>First we generate the parameter folders:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Define folder of abm:</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>abmfolder &lt;-<span class="st"> &quot;D:/owncloud/git/EFForTS-ABM/01_EFForTS-ABM&quot;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co"># Generate vectors for dynamic creation of parameter sets:</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>crops &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;rubber&quot;</span>, <span class="st">&quot;oilpalm&quot;</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>wages &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">0.1</span>)</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co"># Loop, create skeletons, modify and write to disk:</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="cf">for</span>(i <span class="cf">in</span> crops)</span>
+<span id="cb12-10"><a href="#cb12-10"></a>{</span>
+<span id="cb12-11"><a href="#cb12-11"></a>  main &lt;-<span class="st"> </span><span class="kw">get.abm.main.default</span>(<span class="dt">crop =</span> i)</span>
+<span id="cb12-12"><a href="#cb12-12"></a>  management &lt;-<span class="st"> </span><span class="kw">get.abm.management.default</span>(<span class="dt">crop=</span>i, <span class="dt">n=</span><span class="dv">1</span>)</span>
+<span id="cb12-13"><a href="#cb12-13"></a>  </span>
+<span id="cb12-14"><a href="#cb12-14"></a>  <span class="cf">for</span>(j <span class="cf">in</span> wages)</span>
+<span id="cb12-15"><a href="#cb12-15"></a>  {</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="co"># increase wages of management:</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>    management[[<span class="dv">1</span>]][[<span class="st">&quot;wages&quot;</span>]] &lt;-<span class="st"> </span>j</span>
+<span id="cb12-18"><a href="#cb12-18"></a>    </span>
+<span id="cb12-19"><a href="#cb12-19"></a>    <span class="co"># Write to abmfolder:</span></span>
+<span id="cb12-20"><a href="#cb12-20"></a>    param.set.name &lt;-<span class="st"> </span><span class="kw">paste0</span>(i, <span class="st">&quot;_wages_&quot;</span>, j)</span>
+<span id="cb12-21"><a href="#cb12-21"></a>    <span class="kw">set.abm.parfiles</span>(abmfolder, param.set.name, main, management, <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb12-22"><a href="#cb12-22"></a>  }</span>
+<span id="cb12-23"><a href="#cb12-23"></a>}</span></code></pre></div>
+<p>Now we can use these folders for our nlrx experiment. First, we generate a vector with all folder names, and then use this vector to set our model variables LUT-0-folder and LUT-1-folder.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2"></a>param.sets.rubber &lt;-<span class="st"> </span><span class="kw">paste0</span>(crops[<span class="dv">1</span>], <span class="st">&quot;_wages_&quot;</span>, wages)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>param.sets.oilpalm &lt;-<span class="st"> </span><span class="kw">paste0</span>(crops[<span class="dv">2</span>], <span class="st">&quot;_wages_&quot;</span>, wages)</span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="kw">library</span>(nlrx)</span>
+<span id="cb13-6"><a href="#cb13-6"></a></span>
+<span id="cb13-7"><a href="#cb13-7"></a>netlogopath &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;C:/Program Files/NetLogo 6.1.0&quot;</span>)</span>
+<span id="cb13-8"><a href="#cb13-8"></a>modelpath &lt;-<span class="st"> &quot;01_EFForTS-ABM/EFForTS-ABM.nlogo&quot;</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>outpath &lt;-<span class="st"> &quot;03_Analyses/&quot;</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a></span>
+<span id="cb13-11"><a href="#cb13-11"></a>nl &lt;-<span class="st"> </span><span class="kw">nl</span>(<span class="dt">nlversion =</span> <span class="st">&quot;6.1.0&quot;</span>,</span>
+<span id="cb13-12"><a href="#cb13-12"></a>         <span class="dt">nlpath =</span> netlogopath,</span>
+<span id="cb13-13"><a href="#cb13-13"></a>         <span class="dt">modelpath =</span> modelpath,</span>
+<span id="cb13-14"><a href="#cb13-14"></a>         <span class="dt">jvmmem =</span> <span class="dv">1024</span>)</span>
+<span id="cb13-15"><a href="#cb13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16"></a>nl<span class="op">@</span>experiment &lt;-<span class="st"> </span><span class="kw">experiment</span>(<span class="dt">expname=</span><span class="st">&quot;invest&quot;</span>,</span>
+<span id="cb13-17"><a href="#cb13-17"></a>                            <span class="dt">outpath=</span>outpath,</span>
+<span id="cb13-18"><a href="#cb13-18"></a>                            <span class="dt">repetition=</span><span class="dv">1</span>,</span>
+<span id="cb13-19"><a href="#cb13-19"></a>                            <span class="dt">tickmetrics=</span><span class="st">&quot;true&quot;</span>,</span>
+<span id="cb13-20"><a href="#cb13-20"></a>                            <span class="dt">idsetup=</span><span class="st">&quot;setup-with-external-maps&quot;</span>,</span>
+<span id="cb13-21"><a href="#cb13-21"></a>                            <span class="dt">idgo=</span><span class="st">&quot;go&quot;</span>,</span>
+<span id="cb13-22"><a href="#cb13-22"></a>                            <span class="dt">runtime=</span><span class="dv">50</span>,</span>
+<span id="cb13-23"><a href="#cb13-23"></a>                            <span class="dt">metrics=</span><span class="kw">get.abm.metrics</span>(),</span>
+<span id="cb13-24"><a href="#cb13-24"></a>                            <span class="dt">constants =</span> <span class="kw">get.abm.defaults</span>())</span>
+<span id="cb13-25"><a href="#cb13-25"></a></span>
+<span id="cb13-26"><a href="#cb13-26"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(<span class="dt">nl =</span> nl, </span>
+<span id="cb13-27"><a href="#cb13-27"></a>                      <span class="dt">varname =</span> <span class="st">&quot;LUT-0-folder&quot;</span>, </span>
+<span id="cb13-28"><a href="#cb13-28"></a>                      <span class="dt">values =</span> param.sets.oilpalm)                            </span>
+<span id="cb13-29"><a href="#cb13-29"></a></span>
+<span id="cb13-30"><a href="#cb13-30"></a>nl &lt;-<span class="st"> </span><span class="kw">set.nl.variable</span>(<span class="dt">nl =</span> nl, </span>
+<span id="cb13-31"><a href="#cb13-31"></a>                      <span class="dt">varname =</span> <span class="st">&quot;LUT-1-folder&quot;</span>, </span>
+<span id="cb13-32"><a href="#cb13-32"></a>                      <span class="dt">values =</span> param.sets.rubber)                            </span>
+<span id="cb13-33"><a href="#cb13-33"></a></span>
+<span id="cb13-34"><a href="#cb13-34"></a><span class="co"># Then add a full factorial design:</span></span>
+<span id="cb13-35"><a href="#cb13-35"></a>nl<span class="op">@</span>simdesign &lt;-<span class="st"> </span><span class="kw">simdesign_ff</span>(nl, <span class="dt">nseeds=</span><span class="dv">1</span>)</span>
+<span id="cb13-36"><a href="#cb13-36"></a></span>
+<span id="cb13-37"><a href="#cb13-37"></a><span class="co">## Run simulations:</span></span>
+<span id="cb13-38"><a href="#cb13-38"></a><span class="kw">library</span>(future)</span>
+<span id="cb13-39"><a href="#cb13-39"></a><span class="kw">plan</span>(multisession)</span>
+<span id="cb13-40"><a href="#cb13-40"></a>results &lt;-<span class="st"> </span><span class="kw">run_nl_all</span>(nl, <span class="dt">split=</span><span class="dv">6</span>)</span>
+<span id="cb13-41"><a href="#cb13-41"></a></span>
+<span id="cb13-42"><a href="#cb13-42"></a><span class="co">## Attach output:</span></span>
+<span id="cb13-43"><a href="#cb13-43"></a><span class="kw">setsim</span>(nl, <span class="st">&quot;simoutput&quot;</span>) &lt;-<span class="st"> </span>results</span>
+<span id="cb13-44"><a href="#cb13-44"></a><span class="kw">saveRDS</span>(nl, <span class="dt">file =</span> <span class="kw">file.path</span>(outpath, <span class="st">&quot;sims_wages_ff.rds&quot;</span>))</span></code></pre></div>
+
+</body>
+</html>

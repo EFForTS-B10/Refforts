@@ -20,19 +20,6 @@ You can install the development version from
 devtools::install_github("nldoc/Refforts")
 ```
 
-## Functions to add:
-
-  - get default parameterization -\> reports lists with default
-    parameters
-
-  - get default nl object
-
-  - …
-
-  - plots
-
-  - write parameter files
-
 ## Functionality:
 
 A list of default EFForTS-ABM parameters can be reported with:
