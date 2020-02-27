@@ -18,6 +18,14 @@ globalVariables(c(
   "group",
   "type",
   "name",
-  "value"
+  "value",
+  "`[step]`",
+  "'[step]'",
+  "[step]",
+  "`random-seed`",
+  "'random-seed'",
+  "random-seed",
+  "siminputrow",
+  "scenario"
 ))
 # nocov end

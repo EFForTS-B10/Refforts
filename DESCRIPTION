@@ -16,6 +16,9 @@ RoxygenNote: 6.1.1
 Imports: 
     magrittr,
     dplyr,
+    tidyr,
+    ggplot2,
+    ggthemes,
     purrr
 Depends:
     R (>= 3.3)

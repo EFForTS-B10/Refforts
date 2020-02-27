@@ -270,3 +270,27 @@ results <- run_nl_all(nl, split=6)
 setsim(nl, "simoutput") <- results
 saveRDS(nl, file = file.path(outpath, "sims_wages_ff.rds"))
 ```
+
+#### Example 5: Time series plots
+
+The package can generate facets with time-series plots for all collected
+metrics with the function `plot.abm.timeseries()`. The function
+automatically uses all metrics from the nl object, but it is also
+possible to only use some metrics. Finally, the returned ggplot object
+can be plotted or visualized in an interactive way with plotly.
+
+``` r
+
+nl <- nl_spatial
+
+timeplot <- doplot.abm.timeseries(nl, metrics=nl@experiment@metrics)
+
+timeplot
+plotly::ggplotly(timeplot)
+
+## Or, specify only some metrics:
+timeplot <- doplot.abm.timeseries(nl, metrics=c("count sheep"))
+
+timeplot
+plotly::ggplotly(timeplot)
+```
