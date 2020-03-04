@@ -299,3 +299,50 @@ plotly::ggplotly(timeplot)
 
 ```
 
+
+#### Example 6: Simulate price data
+
+Refforts bring ssome functions to generate price data for rubber and oilpalm.
+It uses Gemoetric Brownian Motion to generate correlated price curves.
+Historical monthly price data is used to calculate some charactersitics. These characteristics are then used to simulate artificial price curves that are correlated with one another.
+
+To generate one series with 10 years of price data:
+
+``` r
+prices.GBM.one.series(years=10)
+
+```
+
+Within this function, one can also define a start and end date. These are used to filter the historical data. So if the price curve should only represent the development of the last ten years, this can be done as follows:
+
+``` r
+prices.GBM.one.series(years=10, start.date=as.Date("2010-01-01"), end.date=as.Date("2020-01-01"))
+```
+
+To generate multiple series at once:
+``` r
+n.series <- 100
+path.series <- purrr::map_dfr(1:n.series, function(x){
+  prices.GBM.one.series(years=50, id=x)
+})
+```
+
+These series can then be clustered, using dynamic time warping (package dtwclust):
+``` r
+# get list of cluster objects for each crop:
+clusterlist <- prices.GBM.cluster(path.series)
+# add cluster ids to series data:
+series.cl <- prices.GBM.cluster.series(path.series, clusterlist)
+
+# plot cluster:
+library(ggplot2)
+ggplot(series.cl, aes(x=time, y=price, color=factor(series))) +
+  facet_grid(crop~cluster, scales="free") +
+  geom_line() +
+  guides(color="none") +
+  scale_y_log10() +
+  theme_minimal()
+
+```
+
+COMING NEXT: How to use this price data for setting parameter files in EFForTS ABM and run experiments!

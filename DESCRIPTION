@@ -19,6 +19,9 @@ Imports:
     tidyr,
     ggplot2,
     ggthemes,
-    purrr
+    purrr,
+    dtwclust,
+    zoo,
+    tibble
 Depends:
     R (>= 3.3)

@@ -26,6 +26,16 @@ globalVariables(c(
   "'random-seed'",
   "random-seed",
   "siminputrow",
-  "scenario"
+  "scenario",
+  "crop",
+  "V1",
+  "V2",
+  "oilpalm",
+  "rubber",
+  "series",
+  "time",
+  "crop",
+  "price",
+  "prices.wb"
 ))
 # nocov end
