@@ -4,7 +4,9 @@
 \name{prices.wb}
 \alias{prices.wb}
 \title{Historical prices data extracted from World Bank (The Pink Sheet)}
-\format{historical prices data for rubber and oilpalm}
+\format{
+historical prices data for rubber and oilpalm
+}
 \usage{
 prices.wb
 }

@@ -4,8 +4,10 @@
 \alias{prices.zoo}
 \title{Get monthly price data as zoo object from included package data prices.wb}
 \usage{
-prices.zoo(start.date = as.Date("1960-01-01"),
-  end.date = as.Date("2020-01-01"))
+prices.zoo(
+  start.date = as.Date("1960-01-01"),
+  end.date = as.Date("2020-01-01")
+)
 }
 \arguments{
 \item{start.date}{start date of time series in format as.Date("yyyy-mm-dd")}

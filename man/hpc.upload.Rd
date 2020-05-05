@@ -4,8 +4,7 @@
 \alias{hpc.upload}
 \title{Sends a file or a complete folder to the remote host (HPC) via ssh}
 \usage{
-hpc.upload(from = NA, to = NA, user = NA, host = "login.gwdg.de",
-  key = NA)
+hpc.upload(from = NA, to = NA, user = NA, host = "transfer.gwdg.de", key = NA)
 }
 \arguments{
 \item{from}{File or folder to copy}

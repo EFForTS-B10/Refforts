@@ -4,7 +4,9 @@
 \name{abm.table}
 \alias{abm.table}
 \title{EFForTS-ABM table with parameters and metrics}
-\format{EFForTS-ABM table with parameters and metrics}
+\format{
+EFForTS-ABM table with parameters and metrics
+}
 \usage{
 abm.table
 }

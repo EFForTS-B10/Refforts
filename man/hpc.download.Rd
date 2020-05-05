@@ -4,8 +4,13 @@
 \alias{hpc.download}
 \title{Download files or a complete folder from the remote host (HPC) via ssh}
 \usage{
-hpc.download(from = NA, to = NA, user = NA, host = "login.gwdg.de",
-  key = NA)
+hpc.download(
+  from = NA,
+  to = NA,
+  user = NA,
+  host = "transfer.gwdg.de",
+  key = NA
+)
 }
 \arguments{
 \item{from}{File or folder to copy from the remote host}

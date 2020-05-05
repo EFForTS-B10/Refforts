@@ -4,8 +4,15 @@
 \alias{set.nl.variable}
 \title{Set a variable in the exepriment of the provided nl object}
 \usage{
-set.nl.variable(nl, varname, values = NULL, min = NULL, max = NULL,
-  step = NULL, qfun = NULL)
+set.nl.variable(
+  nl,
+  varname,
+  values = NULL,
+  min = NULL,
+  max = NULL,
+  step = NULL,
+  qfun = NULL
+)
 }
 \arguments{
 \item{nl}{nl object}

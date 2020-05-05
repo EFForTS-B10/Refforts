@@ -22,7 +22,7 @@
 hpc.upload <- function(from=NA,
                            to=NA,
                            user=NA,
-                           host="login.gwdg.de",
+                           host="transfer.gwdg.de",
                            key=NA) {
 
   user.host <- paste0(user, "@", host)

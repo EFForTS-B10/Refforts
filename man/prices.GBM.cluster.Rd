@@ -4,9 +4,16 @@
 \alias{prices.GBM.cluster}
 \title{Cluster multiple GBM series}
 \usage{
-prices.GBM.cluster(series, type = "partitional", k = 20L,
-  distance = "dtw_basic", centroid = "pam", seed = 3247L,
-  trace = TRUE, window.size = 20L)
+prices.GBM.cluster(
+  series,
+  type = "partitional",
+  k = 20L,
+  distance = "dtw_basic",
+  centroid = "pam",
+  seed = 3247L,
+  trace = TRUE,
+  window.size = 20L
+)
 }
 \arguments{
 \item{series}{tibble with at least 2 series of GBM price data}

@@ -4,8 +4,12 @@
 \alias{prices.GBM.one.series}
 \title{Generate one series of price data using GBM}
 \usage{
-prices.GBM.one.series(years = 50, start.date = as.Date("1960-01-01"),
-  end.date = as.Date("2020-01-01"), id = 1)
+prices.GBM.one.series(
+  years = 50,
+  start.date = as.Date("1960-01-01"),
+  end.date = as.Date("2020-01-01"),
+  id = 1
+)
 }
 \arguments{
 \item{years}{number of years for which stoachstic time series should be generated}
