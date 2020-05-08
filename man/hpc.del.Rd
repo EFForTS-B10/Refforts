@@ -4,12 +4,20 @@
 \alias{hpc.del}
 \title{Deletes all files in the specified folder on the remote host (HPC) via ssh}
 \usage{
-hpc.del(folder = NA, user = NA, host = "transfer.gwdg.de", key = NA)
+hpc.del(
+  folder = NA,
+  user = NA,
+  command = "find",
+  host = "transfer.gwdg.de",
+  key = NA
+)
 }
 \arguments{
 \item{folder}{folder where files are deletd on the remote host}
 
 \item{user}{user name on the remote host}
+
+\item{command}{decide which command is sued for deleting files. Options are "rm" or "find".}
 
 \item{host}{host server address}
 
@@ -19,5 +27,8 @@ hpc.del(folder = NA, user = NA, host = "transfer.gwdg.de", key = NA)
 Deletes all files in the specified folder on the remote host (HPC) via ssh
 }
 \details{
-Deletes all files in the specified folder on the remote host (HPC) via ssh
+Deletes all files in the specified folder on the remote host (HPC) via ssh.
+The command options can be used to define which bash command is used for deleting files.
+While "rm" may be faster, it throws error messages for very long file lists.
+Thus, "find" should be used for large numbers of files.
 }
