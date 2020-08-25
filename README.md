@@ -20,32 +20,6 @@ You can install the development version from
 devtools::install_github("nldoc/Refforts")
 ```
 
-## HPC communication functions
-
-The package contains three functions that allow to upload, download and
-delete data on the GWDG HPC. This makes it convenient to send the
-current model version to the HPC right before exeuction of simulations
-with nlrx.
-
-The functions use directory definitions (from/to), the GWDG user name
-and a fitting ssh key for communcaiton with the HPC:
-
-``` r
-## copy model files to server:
-hpc.upload(from=file.path(getwd(), "01_EFForTS-ABM"),
-           to=file.path(netlogopath, "app/models/"),
-           user="jsaleck", key="/home/...")
-           
-## collect results from remote HPC:
-hpc.download(from=file.path(nl@experiment@outpath),
-             to=file.path(getwd(), "ssh_download"),
-             user="jsaleck", key="/home/...")
-
-## Delete files on HPC:
-hpc.del(folder = nl@experiment@outpath,
-        user="jsaleck", key="/home/...")
-```
-
 ## Using functions with nlrx
 
 A list of default EFForTS-ABM parameters can be reported with:
@@ -378,3 +352,56 @@ ggplot(series.cl, aes(x=time, y=price, color=factor(series))) +
 
 COMING NEXT: How to use this price data for setting parameter files in
 EFForTS ABM and run experiments\!
+
+## Utility functions:
+
+#### HPC communication functions
+
+The package contains three functions that allow to upload, download and
+delete data on the GWDG HPC. This makes it convenient to send the
+current model version to the HPC right before exeuction of simulations
+with nlrx.
+
+The functions use directory definitions (from/to), the GWDG user name
+and a fitting ssh key for communcaiton with the HPC:
+
+``` r
+## copy model files to server:
+hpc.upload(from=file.path(getwd(), "01_EFForTS-ABM"),
+           to=file.path(netlogopath, "app/models/"),
+           user="jsaleck", key="/home/...")
+           
+## collect results from remote HPC:
+hpc.download(from=file.path(nl@experiment@outpath),
+             to=file.path(getwd(), "ssh_download"),
+             user="jsaleck", key="/home/...")
+
+## Delete files on HPC:
+hpc.del(folder = nl@experiment@outpath,
+        user="jsaleck", key="/home/...")
+```
+
+#### Vector rescaling:
+
+The function re-scales a vector of values to a new min and max range
+(defaults to 0-1 range).
+
+``` r
+tibble::tibble(a=c(3, 2523, 223, 342, 33, 26, 85, 75)) %>%
+  dplyr::mutate(b = util.rescale.vector(a))
+```
+
+#### Save ggplots as svg and png simoultaneously:
+
+ggsave wrapper to save svg and png at the same time:
+
+``` r
+library(ggplot2)
+
+# create a simple plot:
+ptest <- ggplot(mtcars, aes(x=hp, y=qsec)) +
+          geom_point()
+
+# Save:
+util.ggsave(plot=ptest, filename="test", path="C:/plots", width=12, height=12, dpi=300)
+```
