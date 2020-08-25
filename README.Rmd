@@ -34,11 +34,39 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("nldoc/Refforts")
 ```
 
-## Functionality:
+## HPC communication functions
+
+The package contains three functions that allow to upload, download and delete data on the GWDG HPC.
+This makes it convenient to send the current model version to the HPC right before exeuction of simulations with nlrx.
+
+The functions use directory definitions (from/to), the GWDG user name and a fitting ssh key for communcaiton with the HPC:
+
+``` r
+## copy model files to server:
+hpc.upload(from=file.path(getwd(), "01_EFForTS-ABM"),
+           to=file.path(netlogopath, "app/models/"),
+           user="jsaleck", key="/home/...")
+           
+## collect results from remote HPC:
+hpc.download(from=file.path(nl@experiment@outpath),
+             to=file.path(getwd(), "ssh_download"),
+             user="jsaleck", key="/home/...")
+
+## Delete files on HPC:
+hpc.del(folder = nl@experiment@outpath,
+        user="jsaleck", key="/home/...")
+```
+
+
+## Using functions with nlrx
 
 A list of default EFForTS-ABM parameters can be reported with:
 ``` r
 get.abm.defaults()
+```
+The underlying data can also be accessed as tibble:
+``` r
+View(abm.table)
 ```
 
 A vector of global metrics, patches metrics and a list of turtles metrics
@@ -49,7 +77,6 @@ get.abm.metrics.turtles()
 ```
 
 
-## Using functions with nlrx
 
 #### Example 1: Simple example
 
@@ -160,7 +187,7 @@ Finally, the package is useful to update the parameters of EFForTS-ABM that are 
 First, we might want to scan our parameter folder for existing specifications:
 
 ``` r
-parfiles <- get.abm.parfiles(nl@modelpath)
+parfiles <- get.abm.parfiles(dirname(nl@modelpath))
 ```
 
 But we can also add new parameterfiles:
@@ -173,7 +200,7 @@ Finally, we write the new parameter sets as a new subfolder into our EFForTS-ABM
 
 
 ``` r
-abmfolder <- nl@modelpath
+abmfolder <- dirname(nl@modelpath)
 main <- get.abm.main.default(crop = "oilpalm")
 management <- get.abm.management.default(crop="oilpalm", n=2)
 
