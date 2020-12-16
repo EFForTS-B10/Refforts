@@ -4,7 +4,7 @@ rnd-seed,parameter,global,setup,numeric,3478436
 which-map,parameter,global,setup,string,"""hundred-farmers3"""
 land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year"""
 sim-time,parameter,global,setup,numeric,50
-price_scenario,parameter,global,prices,string,"""historical_trends"""
+price_scenario,parameter,global,prices,string,"""constant_prices"""
 price-fluctuation-percent,parameter,global,prices,numeric,10
 historical_smoothing,parameter,global,prices,numeric,0
 LUT-0-folder,parameter,global,prices,string,"""oilpalm"""
@@ -20,14 +20,14 @@ consumption_base,parameter,global,consumption,numeric,1000
 consumption_frac_cash,parameter,global,consumption,numeric,0.1
 consumption_frac_wealth,parameter,global,consumption,numeric,0.05
 heterogeneous-hhs?,parameter,global,inefficiency,boolean,TRUE
-learning-spillover?,parameter,global,inefficiency,boolean,FALSE
+learning-spillover?,parameter,global,inefficiency,boolean,TRUE
 setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-n-nearest-neighbors"""
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
 h_debt_years_max_bankrupt,parameter,global,landmarket,numeric,5
 landmarket?,parameter,global,landmarket,boolean,TRUE
-buyer_pool_n,parameter,global,landmarket,numeric,10
+buyer_pool_n,parameter,global,landmarket,numeric,20
 immigrant_probability,parameter,global,landmarket,numeric,0.5
 land_price_increase,parameter,global,landmarket,numeric,0.05
 immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]"""
@@ -51,8 +51,10 @@ hh_age_min,parameter,global,hhage,numeric,18
 hh_age_max,parameter,global,hhage,numeric,80
 age_generation,parameter,global,hhage,numeric,40
 takeover_prob,parameter,global,hhage,numeric,0.5
-calc_bird_richness?,parameter,global,biodiversity,boolean,FALSE
-invest_plantdiv?,parameter,global,biodiversity,boolean,TRUE
+ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
+biodiv_birds,parameter,global,biodiversity,string,"""none"""
+biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
+biodiv_invest_objective,parameter,global,biodiversity,string,"""generell"""
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
