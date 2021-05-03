@@ -54,7 +54,7 @@ takeover_prob,parameter,global,hhage,numeric,0.5
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
 biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
-biodiv_invest_objective,parameter,global,biodiversity,string,"""generell"""
+biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
