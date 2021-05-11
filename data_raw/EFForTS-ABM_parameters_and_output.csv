@@ -1,17 +1,17 @@
 name,group,type,category,valuetype,value
 reproducable?,parameter,global,setup,boolean,FALSE
 rnd-seed,parameter,global,setup,numeric,3478436
-which-map,parameter,global,setup,string,"""hundred-farmers3"""
-land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year"""
+which-map,parameter,global,setup,string,hundred-farmers3
+land-use-change-decision,parameter,global,setup,string,only-one-field-per-year
 sim-time,parameter,global,setup,numeric,50
-price_scenario,parameter,global,prices,string,"""constant_prices"""
+price_scenario,parameter,global,prices,string,constant_prices
 price-fluctuation-percent,parameter,global,prices,numeric,10
 historical_smoothing,parameter,global,prices,numeric,0
-LUT-0-folder,parameter,global,prices,string,"""oilpalm"""
+LUT-0-folder,parameter,global,prices,string,oilpalm
 LUT-0-price,parameter,global,prices,numeric,90
 LUT-0-price-mu,parameter,global,prices,numeric,1.9
 LUT-0-price-sd,parameter,global,prices,numeric,1.9
-LUT-1-folder,parameter,global,prices,string,"""rubber"""
+LUT-1-folder,parameter,global,prices,string,rubber
 LUT-1-price,parameter,global,prices,numeric,1100
 LUT-1-price-mu,parameter,global,prices,numeric,11
 LUT-1-price-sd,parameter,global,prices,numeric,11
@@ -21,7 +21,7 @@ consumption_frac_cash,parameter,global,consumption,numeric,0.1
 consumption_frac_wealth,parameter,global,consumption,numeric,0.05
 heterogeneous-hhs?,parameter,global,inefficiency,boolean,TRUE
 learning-spillover?,parameter,global,inefficiency,boolean,TRUE
-setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-n-nearest-neighbors"""
+setup-hh-network,parameter,global,inefficiency,string,hh-nw-n-nearest-neighbors
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
@@ -30,9 +30,9 @@ landmarket?,parameter,global,landmarket,boolean,TRUE
 buyer_pool_n,parameter,global,landmarket,numeric,20
 immigrant_probability,parameter,global,landmarket,numeric,0.5
 land_price_increase,parameter,global,landmarket,numeric,0.05
-immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]"""
+immigrant-xp-bonus,parameter,global,landmarket,string,[0 0]
 immigrant-wealth-factor,parameter,global,landmarket,numeric,1
-initial-wealth-distribution,parameter,global,wealth,string,"""log-normal"""
+initial-wealth-distribution,parameter,global,wealth,string,log-normal
 init-wealth-correction-factor,parameter,global,wealth,numeric,10
 wealth-log-mean,parameter,global,wealth,numeric,7
 wealth-log-sd,parameter,global,wealth,numeric,1
@@ -52,9 +52,11 @@ hh_age_max,parameter,global,hhage,numeric,80
 age_generation,parameter,global,hhage,numeric,40
 takeover_prob,parameter,global,hhage,numeric,0.5
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
-biodiv_birds,parameter,global,biodiversity,string,"""none"""
-biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
-biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
+biodiv_birds,parameter,global,biodiversity,string,none
+biodiv_plants,parameter,global,biodiversity,string,SAR
+biodiv_invest_objective,parameter,global,biodiversity,string,general
+p_impact-location,parameter,global,biodiversity,boolean,FALSE
+which-machine?,parameter,global,biodiversity,string,server
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
@@ -103,6 +105,8 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
+p_landuse_invest,variable,patches,biodiversity,numeric,NA
+p_habitat_quality,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
