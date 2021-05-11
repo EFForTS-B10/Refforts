@@ -353,6 +353,10 @@ ggplot(series.cl, aes(x=time, y=price, color=factor(series))) +
 COMING NEXT: How to use this price data for setting parameter files in
 EFForTS ABM and run experiments\!
 
+## Update abm.table
+
+When making changes to already existing parameters or introducing new parameters into EFForTS-ABM, it is necessary to update the abm.table. Thereto change the EFForTS-ABM_parameters_and_output.csv accordingly and execute the load_abm_defaults.R script. Notice, that you need to have rwx permission to execute the load_abm_defaults.R on the cloudserver.  
+
 ## Utility functions:
 
 #### HPC communication functions
