@@ -55,7 +55,7 @@ ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
 biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
 biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
-p_impact-location,parameter,global,biodiversity,boolean,FALSE
+p_impact-location,parameter,patches,biodiversity,boolean,FALSE
 which-machine?,parameter,global,biodiversity,string,"""server"""
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
