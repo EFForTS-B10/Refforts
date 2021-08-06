@@ -88,7 +88,6 @@ p.capitalstock.mean,variable,global,production,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
-p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse,variable,patches,landscape,numeric,NA
 p_management,variable,patches,management,numeric,NA
 p_road,variable,patches,landscape,numeric,NA
