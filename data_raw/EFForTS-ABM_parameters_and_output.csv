@@ -55,7 +55,6 @@ ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
 biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
 biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
-p_impact-location,parameter,patches,biodiversity,boolean,FALSE
 which-machine?,parameter,global,biodiversity,string,"""server"""
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
@@ -89,6 +88,7 @@ p.capitalstock.mean,variable,global,production,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
+p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse,variable,patches,landscape,numeric,NA
 p_management,variable,patches,management,numeric,NA
 p_road,variable,patches,landscape,numeric,NA
