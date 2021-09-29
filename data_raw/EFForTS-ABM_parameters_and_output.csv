@@ -62,7 +62,6 @@ lut1.yield.sum,variable,global,production,numeric,NA
 lut0.yield.mean,variable,global,production,numeric,NA
 lut1.yield.mean,variable,global,production,numeric,NA
 hh.count,variable,global,household,numeric,NA
-hh.count.immigrant,variable,global,household,numeric,NA
 hh.area.sum,variable,global,household,numeric,NA
 hh.area.mean,variable,global,household,numeric,NA
 hh.consumption.sum,variable,global,household,numeric,NA
@@ -118,7 +117,6 @@ h_cost_land,variable,turtles,costs,numeric,NA
 h_revenue,variable,turtles,production,numeric,NA
 h_production,variable,turtles,production,numeric,NA
 h_inefficiencies,variable,turtles,inefficiency,list,NA
-h_immigrant?,variable,turtles,household,numeric,NA
 h_management,variable,turtles,management,list,NA
 h_land-use-change,variable,turtles,production,list,NA
 h_connected_hhs,variable,turtles,inefficiency,agentset,NA
