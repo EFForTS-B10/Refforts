@@ -25,13 +25,6 @@ setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-n-nearest-neighbo
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
-h_debt_years_max_bankrupt,parameter,global,landmarket,numeric,5
-landmarket?,parameter,global,landmarket,boolean,TRUE
-buyer_pool_n,parameter,global,landmarket,numeric,20
-immigrant_probability,parameter,global,landmarket,numeric,0.5
-land_price_increase,parameter,global,landmarket,numeric,0.05
-immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]"""
-immigrant-wealth-factor,parameter,global,landmarket,numeric,1
 initial-wealth-distribution,parameter,global,wealth,string,"""log-normal"""
 init-wealth-correction-factor,parameter,global,wealth,numeric,10
 wealth-log-mean,parameter,global,wealth,numeric,7
@@ -45,12 +38,6 @@ external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.1
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
-hh_age_alpha,parameter,global,hhage,numeric,14.24
-hh_age_lambda,parameter,global,hhage,numeric,0.31
-hh_age_min,parameter,global,hhage,numeric,18
-hh_age_max,parameter,global,hhage,numeric,80
-age_generation,parameter,global,hhage,numeric,40
-takeover_prob,parameter,global,hhage,numeric,0.5
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
 biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
@@ -110,7 +97,6 @@ p_habitat_quality,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
-h_age,variable,turtles,hhage,numeric,NA
 h_area,variable,turtles,household,numeric,NA
 h_patches,variable,turtles,household,agentset,NA
 h_field_id_list,variable,turtles,household,list,NA
