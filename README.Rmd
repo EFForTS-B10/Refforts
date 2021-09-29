@@ -17,13 +17,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Refforts
+# Refforts-Biodiv
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The Refforts package is intended to provide scripts for analyzing the EFForTS model suite.
-In particular, EFForTS-ABM and EFForTS-LGraf.
+The Refforts-Biodiv package is intended to provide scripts for analyzing the biodiversity modul of EFForTS-ABM.
 
 ## Installation
 
@@ -31,7 +30,7 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("nldoc/Refforts")
+devtools::install_github("JuliaHen/Refforts-Biodiv")
 ```
 
 ## Using functions with nlrx
