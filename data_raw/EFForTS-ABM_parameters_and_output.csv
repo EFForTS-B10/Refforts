@@ -40,9 +40,10 @@ rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
-biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
-biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
-which-machine?,parameter,global,biodiversity,string,"""server"""
+biodiv_plants,parameter,global,biodiversity,string,"""none"""
+biodiv_natcap_invest,parameter,global,biodiversity,string,"""habitatquality"""
+natcap_invest_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
+inv_test,parameter,global,testing-biodiversity,string,"test1"
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
@@ -74,7 +75,6 @@ p.capitalstock.mean,variable,global,production,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
-p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse,variable,patches,landscape,numeric,NA
 p_management,variable,patches,management,numeric,NA
 p_road,variable,patches,landscape,numeric,NA
@@ -91,6 +91,7 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
+p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse_invest,variable,patches,biodiversity,numeric,NA
 p_habitat_quality,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
