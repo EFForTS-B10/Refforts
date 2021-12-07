@@ -43,7 +43,8 @@ biodiv_birds,parameter,global,biodiversity,string,"""none"""
 biodiv_plants,parameter,global,biodiversity,string,"""none"""
 biodiv_natcap_invest,parameter,global,biodiversity,string,"""habitatquality"""
 natcap_invest_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
-inv_test,parameter,global,testing-biodiversity,string,"test1"
+inv-test,parameter,global,testing-biodiversity,string,"test1"
+k, parameter, global, biodiversity, numeric, 0.5
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
