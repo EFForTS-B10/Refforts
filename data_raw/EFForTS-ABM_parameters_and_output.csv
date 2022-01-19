@@ -44,7 +44,7 @@ biodiv_plants,parameter,global,biodiversity,string,"""none"""
 biodiv_natcap_invest,parameter,global,biodiversity,string,"""habitatquality"""
 natcap_invest_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
 inv-test,parameter,global,testing-biodiversity,string,"test1"
-k, parameter, global, biodiversity, numeric, 0.5
+k, parameter, global, biodiversity, numeric, 0.05
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
@@ -69,6 +69,7 @@ hh.area.mean,variable,global,household,numeric,NA
 hh.consumption.sum,variable,global,household,numeric,NA
 hh.consumption.mean,variable,global,household,numeric,NA
 p.sar,variable,global,biodiversity,numeric,NA
+p.hq, variable,global,biodiversity,numeric,NA
 p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
