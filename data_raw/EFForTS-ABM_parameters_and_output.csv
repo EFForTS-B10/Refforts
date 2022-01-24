@@ -25,13 +25,6 @@ setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-n-nearest-neighbo
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
-h_debt_years_max_bankrupt,parameter,global,landmarket,numeric,5
-landmarket?,parameter,global,landmarket,boolean,TRUE
-buyer_pool_n,parameter,global,landmarket,numeric,20
-immigrant_probability,parameter,global,landmarket,numeric,0.5
-land_price_increase,parameter,global,landmarket,numeric,0.05
-immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]"""
-immigrant-wealth-factor,parameter,global,landmarket,numeric,1
 initial-wealth-distribution,parameter,global,wealth,string,"""log-normal"""
 init-wealth-correction-factor,parameter,global,wealth,numeric,10
 wealth-log-mean,parameter,global,wealth,numeric,7
@@ -45,17 +38,13 @@ external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.1
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
-hh_age_alpha,parameter,global,hhage,numeric,14.24
-hh_age_lambda,parameter,global,hhage,numeric,0.31
-hh_age_min,parameter,global,hhage,numeric,18
-hh_age_max,parameter,global,hhage,numeric,80
-age_generation,parameter,global,hhage,numeric,40
-takeover_prob,parameter,global,hhage,numeric,0.5
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_birds,parameter,global,biodiversity,string,"""none"""
-biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
-biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
-which-machine?,parameter,global,biodiversity,string,"""server"""
+biodiv_plants,parameter,global,biodiversity,string,"""none"""
+biodiv_natcap_invest,parameter,global,biodiversity,string,"""habitatquality"""
+natcap_invest_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
+inv-test,parameter,global,testing-biodiversity,string,"test1"
+k,parameter, global, biodiversity, numeric, 0.05
 allow-fallow?,parameter,global,management,boolean,FALSE
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
@@ -75,12 +64,12 @@ lut1.yield.sum,variable,global,production,numeric,NA
 lut0.yield.mean,variable,global,production,numeric,NA
 lut1.yield.mean,variable,global,production,numeric,NA
 hh.count,variable,global,household,numeric,NA
-hh.count.immigrant,variable,global,household,numeric,NA
 hh.area.sum,variable,global,household,numeric,NA
 hh.area.mean,variable,global,household,numeric,NA
 hh.consumption.sum,variable,global,household,numeric,NA
 hh.consumption.mean,variable,global,household,numeric,NA
 p.sar,variable,global,biodiversity,numeric,NA
+p.hq,variable,global,biodiversity,numeric,NA
 p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
@@ -88,7 +77,6 @@ p.capitalstock.mean,variable,global,production,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
-p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse,variable,patches,landscape,numeric,NA
 p_management,variable,patches,management,numeric,NA
 p_road,variable,patches,landscape,numeric,NA
@@ -105,12 +93,12 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
+p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse_invest,variable,patches,biodiversity,numeric,NA
 p_habitat_quality,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
-h_age,variable,turtles,hhage,numeric,NA
 h_area,variable,turtles,household,numeric,NA
 h_patches,variable,turtles,household,agentset,NA
 h_field_id_list,variable,turtles,household,list,NA
@@ -132,7 +120,6 @@ h_cost_land,variable,turtles,costs,numeric,NA
 h_revenue,variable,turtles,production,numeric,NA
 h_production,variable,turtles,production,numeric,NA
 h_inefficiencies,variable,turtles,inefficiency,list,NA
-h_immigrant?,variable,turtles,household,numeric,NA
 h_management,variable,turtles,management,list,NA
 h_land-use-change,variable,turtles,production,list,NA
 h_connected_hhs,variable,turtles,inefficiency,agentset,NA
