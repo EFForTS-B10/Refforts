@@ -92,7 +92,7 @@ p_optimal_production,variable,patches,production,numeric,NA
 p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse_invest,variable,patches,biodiversity,numeric,NA
 p_habitat_quality,variable,patches,biodiversity,numeric,NA
-p_impact-location,parameter,global,biodiversity,boolean,FALSE
+p_impact_location,parameter,global,biodiversity,boolean,FALSE
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
