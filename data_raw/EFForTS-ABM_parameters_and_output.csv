@@ -41,7 +41,7 @@ rent_rate_land,parameter,global,capital,numeric,0.1
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_natcap_invest,parameter,global,biodiversity,string,"habitatquality"
 natcap_invest_experiment,parameter,global,biodiversity,string,"spatial_landuse"
-inv-test,parameter,global,testing-biodiversity,string,"test1"
+inv-test,parameter,global,biodiversity,string,"test1"
 k,parameter,global,biodiversity,numeric,0.05
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
