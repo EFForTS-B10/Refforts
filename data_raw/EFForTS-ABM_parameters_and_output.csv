@@ -1,17 +1,17 @@
 name,group,type,category,valuetype,value
 reproducable?,parameter,global,setup,boolean,FALSE
 rnd-seed,parameter,global,setup,numeric,3478436
-"which-map,parameter,global,setup,string,""hundred-farmers3"""
-"land-use-change-decision,parameter,global,setup,string,""only-one-field-per-year"""
+which-map,parameter,global,setup,string,"hundred-farmers3"
+land-use-change-decision,parameter,global,setup,string,"only-one-field-per-year"
 sim-time,parameter,global,setup,numeric,50
-"price_scenario,parameter,global,prices,string,""constant_prices"""
+price_scenario,parameter,global,prices,string,"constant_prices"
 price-fluctuation-percent,parameter,global,prices,numeric,10
 historical_smoothing,parameter,global,prices,numeric,0
-"LUT-0-folder,parameter,global,prices,string,""oilpalm"""
+LUT-0-folder,parameter,global,prices,string,"oilpalm"
 LUT-0-price,parameter,global,prices,numeric,90
 LUT-0-price-mu,parameter,global,prices,numeric,1.9
 LUT-0-price-sd,parameter,global,prices,numeric,1.9
-"LUT-1-folder,parameter,global,prices,string,""rubber"""
+LUT-1-folder,parameter,global,prices,string,"rubber"
 LUT-1-price,parameter,global,prices,numeric,1100
 LUT-1-price-mu,parameter,global,prices,numeric,11
 LUT-1-price-sd,parameter,global,prices,numeric,11
@@ -21,11 +21,11 @@ consumption_frac_cash,parameter,global,consumption,numeric,0.1
 consumption_frac_wealth,parameter,global,consumption,numeric,0.05
 heterogeneous-hhs?,parameter,global,inefficiency,boolean,TRUE
 learning-spillover?,parameter,global,inefficiency,boolean,TRUE
-"setup-hh-network,parameter,global,inefficiency,string,""hh-nw-n-nearest-neighbors"""
+setup-hh-network,parameter,global,inefficiency,string,"hh-nw-kernel-distance"
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
-"initial-wealth-distribution,parameter,global,wealth,string,""log-normal"""
+initial-wealth-distribution,parameter,global,wealth,string,"log-normal"
 init-wealth-correction-factor,parameter,global,wealth,numeric,10
 wealth-log-mean,parameter,global,wealth,numeric,7
 wealth-log-sd,parameter,global,wealth,numeric,1
@@ -36,19 +36,13 @@ discount-rate,parameter,global,capital,numeric,0.1
 land_price,parameter,global,capital,numeric,750
 external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.1
-rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
+rent_rate_capital_borrow,parameter,global,capital,numeric,0.1
 rent_rate_land,parameter,global,capital,numeric,0.1
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
-<<<<<<< HEAD
-"biodiv_birds,parameter,global,biodiversity,string,""none"""
-"biodiv_plants,parameter,global,biodiversity,string,""SAR"""
-"biodiv_invest_objective,parameter,global,biodiversity,string,""general"""
-p_impact-location,parameter,global,biodiversity,boolean,FALSE
-"which-machine?,parameter,global,biodiversity,string,""server"""
-"natcap_invest_experiment,parameter,global,biodiversity,string,""""""spatial_landuse"""""""
-"inv-test,parameter,global,testing-biodiversity,string,""test1"""
-k,parameter, global, biodiversity, numeric, 0.05
-allow-fallow?,parameter,global,management,boolean,FALSE
+biodiv_natcap_invest,parameter,global,biodiversity,string,"habitatquality"
+natcap_invest_experiment,parameter,global,biodiversity,string,"spatial_landuse"
+inv-test,parameter,global,testing-biodiversity,string,"test1"
+k,parameter,global,biodiversity,numeric,0.05
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
 write-maps?,parameter,global,output,boolean,FALSE
@@ -71,7 +65,6 @@ hh.area.sum,variable,global,household,numeric,NA
 hh.area.mean,variable,global,household,numeric,NA
 hh.consumption.sum,variable,global,household,numeric,NA
 hh.consumption.mean,variable,global,household,numeric,NA
-p.sar,variable,global,biodiversity,numeric,NA
 p.hq,variable,global,biodiversity,numeric,NA
 p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
@@ -99,6 +92,7 @@ p_optimal_production,variable,patches,production,numeric,NA
 p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse_invest,variable,patches,biodiversity,numeric,NA
 p_habitat_quality,variable,patches,biodiversity,numeric,NA
+p_impact-location,parameter,global,biodiversity,boolean,FALSE
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
