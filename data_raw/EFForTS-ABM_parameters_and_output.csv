@@ -39,10 +39,10 @@ rent_rate_capital_lend,parameter,global,capital,numeric,0.1
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.1
 rent_rate_land,parameter,global,capital,numeric,0.1
 ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
-biodiv_natcap_invest,parameter,global,biodiversity,string,"""habitatquality"""
-natcap_invest_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
-inv-test,parameter,global,biodiversity,string,"""test1"""
-k,parameter,global,biodiversity,numeric,0.05
+biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
+ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
+ncinv_test,parameter,global,biodiversity,string,"""test1"""
+biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
 go-once-profiler?,parameter,global,output,boolean,FALSE
 SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
 write-maps?,parameter,global,output,boolean,FALSE
@@ -89,9 +89,9 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
-p_impact_location,variable,patches,biodiversity,boolean,FALSE
-p_landuse_invest,variable,patches,biodiversity,numeric,NA
-p_habitat_quality,variable,patches,biodiversity,numeric,NA
+p_impact_ncinv,variable,patches,biodiversity,boolean,FALSE
+p_landuse_ncinv,variable,patches,biodiversity,numeric,NA
+p_hq_ncinv,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
