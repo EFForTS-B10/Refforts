@@ -1,5 +1,5 @@
 name,group,type,category,valuetype,value
-reproducable?,parameter,global,setup,boolean,FALSE
+reproducible?,parameter,global,setup,boolean,FALSE
 rnd-seed,parameter,global,setup,numeric,3478436
 which-map,parameter,global,setup,string,"""hundred-farmers3"""
 land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year"""
@@ -43,8 +43,6 @@ biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
 ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
 ncinv_test,parameter,global,biodiversity,string,"""test1"""
 biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
-go-once-profiler?,parameter,global,output,boolean,FALSE
-SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
