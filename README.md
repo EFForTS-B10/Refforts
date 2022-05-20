@@ -73,7 +73,7 @@ nl@experiment <- experiment(
   repetition = 1,
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
-  idgo = c("go", "update-time"),
+  idgo = c("go", "run_biodiversity", "update-time"),
   runtime = 50,
   metrics = get.abm.metrics(),
   constants = get.abm.defaults()
@@ -117,7 +117,7 @@ nl@experiment <- experiment(
   repetition = 1,
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
-  idgo = c("go", "update-time"),
+  idgo = c("go", "run_biodiversity", "update-time"),
   runtime = 50,
   metrics = get.abm.metrics(),
   constants = get.abm.defaults()
@@ -266,7 +266,7 @@ nl@experiment <- experiment(
   repetition = 1,
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
-  idgo = c("go", "update-time"),
+  idgo = c("go", "run_biodiversity", "update-time"),
   runtime = 50,
   metrics = get.abm.metrics(),
   constants = get.abm.defaults()
