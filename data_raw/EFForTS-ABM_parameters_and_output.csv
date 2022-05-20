@@ -1,5 +1,5 @@
 name,group,type,category,valuetype,value
-reproducable?,parameter,global,setup,boolean,FALSE
+reproducible?,parameter,global,setup,boolean,FALSE
 rnd-seed,parameter,global,setup,numeric,3478436
 which-map,parameter,global,setup,string,"""hundred-farmers3"""
 land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year"""
