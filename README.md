@@ -55,25 +55,29 @@ netlogopath <- file.path("C:/Program Files/NetLogo 6.1.0")
 modelpath <- "01_EFForTS-ABM/EFForTS-ABM.nlogo"
 outpath <- "03_Analyses/"
 
-nl <- nl(nlversion = "6.1.0",
-         nlpath = netlogopath,
-         modelpath = modelpath,
-         jvmmem = 1024)
+nl <- nl(
+  nlversion = "6.1.0",
+  nlpath = netlogopath,
+  modelpath = modelpath,
+  jvmmem = 1024
+)
 ```
 
 Then, we use the functions of the Refforts package to define the
 parameters of the experiment:
 
 ``` r
-nl@experiment <- experiment(expname="invest",
-                            outpath=outpath,
-                            repetition=1,
-                            tickmetrics="true",
-                            idsetup="setup-with-external-maps",
-                            idgo="go",
-                            runtime=50,
-                            metrics=get.abm.metrics(),
-                            constants = get.abm.defaults())
+nl@experiment <- experiment(
+  expname = "invest",
+  outpath = outpath,
+  repetition = 1,
+  tickmetrics = "true",
+  idsetup = c("ca", "setup-with-external-maps"),
+  idgo = c("go", "update-time"),
+  runtime = 50,
+  metrics = get.abm.metrics(),
+  constants = get.abm.defaults()
+)
 ```
 
 Now we can use the other utility functions to change the default
@@ -86,7 +90,7 @@ nl <- set.nl.variable(nl, varname = "LUT-0-price", min = 100, max = 1000, qfun =
 nl <- set.nl.variable(nl, varname = "LUT-1-price", min = 500, max = 5000, qfun = "qunif")
 
 ## Add a latin hypercube simdesign:
-nl@simdesign <- simdesign_lhs(nl, samples=100, nseeds = 1)
+nl@simdesign <- simdesign_lhs(nl, samples = 100, nseeds = 1)
 ```
 
 #### Example 2: Landmarket labor analysis setup
@@ -100,37 +104,47 @@ netlogopath <- file.path("C:/Program Files/NetLogo 6.1.0")
 modelpath <- "01_EFForTS-ABM/EFForTS-ABM.nlogo"
 outpath <- "03_Analyses/"
 
-nl <- nl(nlversion = "6.1.0",
-         nlpath = netlogopath,
-         modelpath = modelpath,
-         jvmmem = 1024)
+nl <- nl(
+  nlversion = "6.1.0",
+  nlpath = netlogopath,
+  modelpath = modelpath,
+  jvmmem = 1024
+)
 
-nl@experiment <- experiment(expname="invest",
-                            outpath=outpath,
-                            repetition=1,
-                            tickmetrics="true",
-                            idsetup="setup-with-external-maps",
-                            idgo="go",
-                            runtime=50,
-                            metrics=get.abm.metrics(),
-                            constants = get.abm.defaults())
+nl@experiment <- experiment(
+  expname = "invest",
+  outpath = outpath,
+  repetition = 1,
+  tickmetrics = "true",
+  idsetup = c("ca", "setup-with-external-maps"),
+  idgo = c("go", "update-time"),
+  runtime = 50,
+  metrics = get.abm.metrics(),
+  constants = get.abm.defaults()
+)
 ```
 
 Then we define variable vectors for a dstinct simulation design:
 
 ``` r
 ### now we might want to move a parameter from const to variable:
-nl <- set.nl.variable(nl = nl, 
-                      varname = "LUT-0-folder", 
-                      values = rep(c("\"oilpalm_labor_min\"", "\"oilpalm_labor_med\"", "\"oilpalm_labor_high\""), 2))
+nl <- set.nl.variable(
+  nl = nl,
+  varname = "LUT-0-folder",
+  values = rep(c("\"oilpalm_labor_min\"", "\"oilpalm_labor_med\"", "\"oilpalm_labor_high\""), 2)
+)
 
-nl <- set.nl.variable(nl = nl, 
-                      varname = "LUT-1-folder", 
-                      values = rep(c("\"rubber_labor_min\"", "\"rubber_labor_med\"", "\"rubber_labor_high\""), 2))
+nl <- set.nl.variable(
+  nl = nl,
+  varname = "LUT-1-folder",
+  values = rep(c("\"rubber_labor_min\"", "\"rubber_labor_med\"", "\"rubber_labor_high\""), 2)
+)
 
-nl <- set.nl.variable(nl = nl, 
-                      varname = "historical_smoothing", 
-                      values = c(rep(0, 3), rep(3, 3)))
+nl <- set.nl.variable(
+  nl = nl,
+  varname = "historical_smoothing",
+  values = c(rep(0, 3), rep(3, 3))
+)
 ```
 
 We can then run and store everything:
@@ -141,7 +155,7 @@ nl@simdesign <- simdesign_distinct(nl = nl, nseeds = 1)
 ## Run simulations:
 library(future)
 plan(multisession)
-results <- run_nl_all(nl, split=6)
+results <- run_nl_all(nl, split = 6)
 
 ## Attach output:
 setsim(nl, "simoutput") <- results
@@ -173,7 +187,7 @@ our EFForTS-ABM directory.
 ``` r
 abmfolder <- dirname(nl@modelpath)
 main <- get.abm.main.default(crop = "oilpalm")
-management <- get.abm.management.default(crop="oilpalm", n=2)
+management <- get.abm.management.default(crop = "oilpalm", n = 2)
 
 # increase max age of crop in main:
 main[["max_age"]] <- 30
@@ -207,16 +221,16 @@ crops <- c("rubber", "oilpalm")
 wages <- seq(1, 2, 0.1)
 
 # Loop, create skeletons, modify and write to disk:
-for(i in crops)
+for (i in crops)
 {
   main <- get.abm.main.default(crop = i)
-  management <- get.abm.management.default(crop=i, n=1)
-  
-  for(j in wages)
+  management <- get.abm.management.default(crop = i, n = 1)
+
+  for (j in wages)
   {
     # increase wages of management:
     management[[1]][["wages"]] <- j
-    
+
     # Write to abmfolder:
     param.set.name <- paste0(i, "_wages_", j)
     set.abm.parfiles(abmfolder, param.set.name, main, management, overwrite = TRUE)
@@ -239,36 +253,44 @@ netlogopath <- file.path("C:/Program Files/NetLogo 6.1.0")
 modelpath <- "01_EFForTS-ABM/EFForTS-ABM.nlogo"
 outpath <- "03_Analyses/"
 
-nl <- nl(nlversion = "6.1.0",
-         nlpath = netlogopath,
-         modelpath = modelpath,
-         jvmmem = 1024)
+nl <- nl(
+  nlversion = "6.1.0",
+  nlpath = netlogopath,
+  modelpath = modelpath,
+  jvmmem = 1024
+)
 
-nl@experiment <- experiment(expname="invest",
-                            outpath=outpath,
-                            repetition=1,
-                            tickmetrics="true",
-                            idsetup="setup-with-external-maps",
-                            idgo="go",
-                            runtime=50,
-                            metrics=get.abm.metrics(),
-                            constants = get.abm.defaults())
+nl@experiment <- experiment(
+  expname = "invest",
+  outpath = outpath,
+  repetition = 1,
+  tickmetrics = "true",
+  idsetup = c("ca", "setup-with-external-maps"),
+  idgo = c("go", "update-time"),
+  runtime = 50,
+  metrics = get.abm.metrics(),
+  constants = get.abm.defaults()
+)
 
-nl <- set.nl.variable(nl = nl, 
-                      varname = "LUT-0-folder", 
-                      values = param.sets.oilpalm)                            
+nl <- set.nl.variable(
+  nl = nl,
+  varname = "LUT-0-folder",
+  values = param.sets.oilpalm
+)
 
-nl <- set.nl.variable(nl = nl, 
-                      varname = "LUT-1-folder", 
-                      values = param.sets.rubber)                            
+nl <- set.nl.variable(
+  nl = nl,
+  varname = "LUT-1-folder",
+  values = param.sets.rubber
+)
 
 # Then add a full factorial design:
-nl@simdesign <- simdesign_ff(nl, nseeds=1)
+nl@simdesign <- simdesign_ff(nl, nseeds = 1)
 
 ## Run simulations:
 library(future)
 plan(multisession)
-results <- run_nl_all(nl, split=6)
+results <- run_nl_all(nl, split = 6)
 
 ## Attach output:
 setsim(nl, "simoutput") <- results
@@ -287,13 +309,13 @@ can be plotted or visualized in an interactive way with plotly.
 
 nl <- nl_spatial
 
-timeplot <- doplot.abm.timeseries(nl, metrics=nl@experiment@metrics)
+timeplot <- doplot.abm.timeseries(nl, metrics = nl@experiment@metrics)
 
 timeplot
 plotly::ggplotly(timeplot)
 
 ## Or, specify only some metrics:
-timeplot <- doplot.abm.timeseries(nl, metrics=c("count sheep"))
+timeplot <- doplot.abm.timeseries(nl, metrics = c("count sheep"))
 
 timeplot
 plotly::ggplotly(timeplot)
@@ -301,16 +323,16 @@ plotly::ggplotly(timeplot)
 
 #### Example 6: Simulate price data
 
-Refforts bring ssome functions to generate price data for rubber and
-oilpalm. It uses Gemoetric Brownian Motion to generate correlated price
+Refforts bring some functions to generate price data for rubber and
+oilpalm. It uses Geometric Brownian Motion to generate correlated price
 curves. Historical monthly price data is used to calculate some
-charactersitics. These characteristics are then used to simulate
+characteristics. These characteristics are then used to simulate
 artificial price curves that are correlated with one another.
 
 To generate one series with 10 years of price data:
 
 ``` r
-prices.GBM.one.series(years=10)
+prices.GBM.one.series(years = 10)
 ```
 
 Within this function, one can also define a start and end date. These
@@ -319,15 +341,15 @@ only represent the development of the last ten years, this can be done
 as follows:
 
 ``` r
-prices.GBM.one.series(years=10, start.date=as.Date("2010-01-01"), end.date=as.Date("2020-01-01"))
+prices.GBM.one.series(years = 10, start.date = as.Date("2010-01-01"), end.date = as.Date("2020-01-01"))
 ```
 
 To generate multiple series at once:
 
 ``` r
 n.series <- 100
-path.series <- purrr::map_dfr(1:n.series, function(x){
-  prices.GBM.one.series(years=50, id=x)
+path.series <- purrr::map_dfr(1:n.series, function(x) {
+  prices.GBM.one.series(years = 50, id = x)
 })
 ```
 
@@ -342,20 +364,16 @@ series.cl <- prices.GBM.cluster.series(path.series, clusterlist)
 
 # plot cluster:
 library(ggplot2)
-ggplot(series.cl, aes(x=time, y=price, color=factor(series))) +
-  facet_grid(crop~cluster, scales="free") +
+ggplot(series.cl, aes(x = time, y = price, color = factor(series))) +
+  facet_grid(crop ~ cluster, scales = "free") +
   geom_line() +
-  guides(color="none") +
+  guides(color = "none") +
   scale_y_log10() +
   theme_minimal()
 ```
 
 COMING NEXT: How to use this price data for setting parameter files in
 EFForTS ABM and run experiments\!
-
-## Update abm.table
-
-When making changes to already existing parameters or introducing new parameters into EFForTS-ABM, it is necessary to update the abm.table. Thereto change the EFForTS-ABM_parameters_and_output.csv accordingly and execute the load_abm_defaults.R script. Notice, that you need to have rwx permission to execute the load_abm_defaults.R on the cloudserver.  
 
 ## Utility functions:
 
@@ -371,18 +389,24 @@ and a fitting ssh key for communcaiton with the HPC:
 
 ``` r
 ## copy model files to server:
-hpc.upload(from=file.path(getwd(), "01_EFForTS-ABM"),
-           to=file.path(netlogopath, "app/models/"),
-           user="jsaleck", key="/home/...")
-           
+hpc.upload(
+  from = file.path(getwd(), "01_EFForTS-ABM"),
+  to = file.path(netlogopath, "app/models/"),
+  user = "jsaleck", key = "/home/..."
+)
+
 ## collect results from remote HPC:
-hpc.download(from=file.path(nl@experiment@outpath),
-             to=file.path(getwd(), "ssh_download"),
-             user="jsaleck", key="/home/...")
+hpc.download(
+  from = file.path(nl@experiment@outpath),
+  to = file.path(getwd(), "ssh_download"),
+  user = "jsaleck", key = "/home/..."
+)
 
 ## Delete files on HPC:
-hpc.del(folder = nl@experiment@outpath,
-        user="jsaleck", key="/home/...")
+hpc.del(
+  folder = nl@experiment@outpath,
+  user = "jsaleck", key = "/home/..."
+)
 ```
 
 #### Vector rescaling:
@@ -391,7 +415,7 @@ The function re-scales a vector of values to a new min and max range
 (defaults to 0-1 range).
 
 ``` r
-tibble::tibble(a=c(3, 2523, 223, 342, 33, 26, 85, 75)) %>%
+tibble::tibble(a = c(3, 2523, 223, 342, 33, 26, 85, 75)) %>%
   dplyr::mutate(b = util.rescale.vector(a))
 ```
 
@@ -403,9 +427,9 @@ ggsave wrapper to save svg and png at the same time:
 library(ggplot2)
 
 # create a simple plot:
-ptest <- ggplot(mtcars, aes(x=hp, y=qsec)) +
-          geom_point()
+ptest <- ggplot(mtcars, aes(x = hp, y = qsec)) +
+  geom_point()
 
 # Save:
-util.ggsave(plot=ptest, filename="test", path="C:/plots", width=12, height=12, dpi=300)
+util.ggsave(plot = ptest, filename = "test", path = "C:/plots", width = 12, height = 12, dpi = 300)
 ```
