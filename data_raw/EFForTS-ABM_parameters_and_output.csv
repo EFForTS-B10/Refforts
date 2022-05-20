@@ -51,14 +51,6 @@ hh_age_min,parameter,global,hhage,numeric,18
 hh_age_max,parameter,global,hhage,numeric,80
 age_generation,parameter,global,hhage,numeric,40
 takeover_prob,parameter,global,hhage,numeric,0.5
-ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
-biodiv_birds,parameter,global,biodiversity,string,"""none"""
-biodiv_plants,parameter,global,biodiversity,string,"""SAR"""
-biodiv_invest_objective,parameter,global,biodiversity,string,"""general"""
-which-machine?,parameter,global,biodiversity,string,"""server"""
-allow-fallow?,parameter,global,management,boolean,FALSE
-go-once-profiler?,parameter,global,output,boolean,FALSE
-SHOW-OUTPUT?,parameter,global,output,boolean,FALSE
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
@@ -80,7 +72,8 @@ hh.area.sum,variable,global,household,numeric,NA
 hh.area.mean,variable,global,household,numeric,NA
 hh.consumption.sum,variable,global,household,numeric,NA
 hh.consumption.mean,variable,global,household,numeric,NA
-p.sar,variable,global,biodiversity,numeric,NA
+hh.lut0.ineff.mean,variable,global,household,numeric,NA
+hh.lut1.ineff.mean,variable,global,household,numeric,NA
 p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
