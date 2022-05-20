@@ -39,6 +39,8 @@ external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.1
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
+ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
+biodiv_birds,parameter,global,biodiversity,string,"""mahnken"""
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
@@ -65,6 +67,9 @@ p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
 p.capitalstock.mean,variable,global,production,numeric,NA
+p.bird.richness.max,variable,global,biodiversity,numeric,NA
+p.bird.richness.min,variable,global,biodiversity,numeric,NA
+p.bird.richness.mean,variable,global,biodiversity,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
