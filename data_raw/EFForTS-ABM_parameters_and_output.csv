@@ -65,6 +65,7 @@ p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
 p.capitalstock.mean,variable,global,production,numeric,NA
+p.predation.rate.mean,variable,global,biodiversity,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
