@@ -47,7 +47,6 @@ constants <- Refforts::get.abm.defaults()
 #   "rnd-seed" = 123,
 #   "which-map" = "\"hundred-farmers3\"",
 #   "land-use-change-decision" = "\"only-one-field-per-year\"",
-#   "sim-time" = 50,
 #   "price_scenario" = "\"historical_trends\"",
 #   "price-fluctuation-percent" = 10,
 #   "historical_smoothing" = 0,
@@ -91,6 +90,9 @@ constants <- Refforts::get.abm.defaults()
 #   "ecol_biodiv_interval" = 1, # only relevant for version "biodiv_birds" # versionspecific
 #   "biodiv_birds" = "\"mahnken\"" # only relevant for version "biodiv_birds" # versionspecific
 # )
+
+# The simulation length is defined by experiment(runtime = ...),
+# therefore the parameter sim-time is not needed!
 
 nl@experiment <- experiment(
   expname = "test",
