@@ -45,7 +45,6 @@ constants <- Refforts::get.abm.defaults()
 #   "rnd-seed" = 123,
 #   "which-map" = "\"hundred-farmers3\"",
 #   "land-use-change-decision" = "\"only-one-field-per-year\"",
-#   "sim-time" = 50,
 #   "price_scenario" = "\"historical_trends\"",
 #   "price-fluctuation-percent" = 10,
 #   "historical_smoothing" = 0,
@@ -88,6 +87,9 @@ constants <- Refforts::get.abm.defaults()
 #   "show-roads?" = "TRUE"
 # )
 
+# The simulation length is defined by experiment(runtime = ...),
+# therefore the parameter sim-time is not needed!
+
 nl@experiment <- experiment(
   expname = "test",
   outpath = outpath,
@@ -95,7 +97,7 @@ nl@experiment <- experiment(
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
   idgo = c("go", "update-time"), # "do-plots" is not needed
-  runtime = 50,
+  runtime = 50, # number of ticks
   metrics = metrics,
   constants = constants
 )
