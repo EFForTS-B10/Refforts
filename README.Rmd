@@ -83,7 +83,7 @@ nl@experiment <- experiment(
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
   idgo = c("go", "update-time"),
-  runtime = 50,
+  runtime = 50, # number of ticks
   metrics = get.abm.metrics(),
   constants = get.abm.defaults()
 )
