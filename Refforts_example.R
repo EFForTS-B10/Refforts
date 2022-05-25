@@ -46,7 +46,6 @@ constants <- Refforts::get.abm.defaults()
 #   "rnd-seed" = 123,
 #   "which-map" = "\"hundred-farmers3\"",
 #   "land-use-change-decision" = "\"only-one-field-per-year\"",
-#   "sim-time" = 50,
 #   "price_scenario" = "\"historical_trends\"",
 #   "price-fluctuation-percent" = 10,
 #   "historical_smoothing" = 0,
@@ -90,6 +89,9 @@ constants <- Refforts::get.abm.defaults()
 #   "biodiv_plants" = "\"SAR\"", # only relevant for version "biodiv_plants" #versionspecific
 #   "biodiv_invest_objective" = "\"general\"" # only relevant for version "biodiv_plants" #versionspecific
 # )
+
+# The simulation length is defined by experiment(runtime = ...),
+# therefore the parameter sim-time is not needed!
 
 nl@experiment <- experiment(
   expname = "test",
