@@ -35,7 +35,8 @@ metrics <- Refforts::get.abm.metrics()
 #   "hh.consumption.sum", "hh.consumption.mean",
 #   "hh.lut0.ineff.mean", "hh.lut1.ineff.mean",
 #   "p.tinput.sum", "p.tinput.mean",
-#   "p.capitalstock.sum", "p.capitalstock.mean"
+#   "p.capitalstock.sum", "p.capitalstock.mean",
+#   "landscape_hq") # only relevant for version "dev" #versionspecific
 # )
 
 constants <- Refforts::get.abm.defaults()
@@ -85,6 +86,10 @@ constants <- Refforts::get.abm.defaults()
 #   "export-view?" = "FALSE",
 #   "show-homebases?" = "TRUE",
 #   "show-roads?" = "TRUE"
+#   "ncinv_experiment" = "\"exp1\"", # only relevant for dev #versionspecific
+#   "ecol_biodiv_interval" = 1, # only relevant for dev #versionspecific
+#   "biodiv_ncinv_k" = 0.01, # has to be > 0 # only relevant for dev #versionspecific
+#   "biodiv_ncinv" = "\"habitatquality\"") # only relevant for dev #versionspecific
 # )
 
 # The simulation length is defined by experiment(runtime = ...),
@@ -114,4 +119,4 @@ setsim(nl, "simoutput") <- results
 
 ## Have a look at results:
 names(results)
-results$lut1.carbon
+results$landscape_hq

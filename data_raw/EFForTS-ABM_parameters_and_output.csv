@@ -44,6 +44,10 @@ write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
 show-homebases?,parameter,global,output,boolean,TRUE
 show-roads?,parameter,global,output,boolean,TRUE
+ncinv_experiment,parameter,global,ncinv,string,“exp1”
+ecol_biodiv_interval,parameter,global,ncinv,numeric,1
+biodiv_ncinv_k,parameter,global,ncinv,numeric,0.05
+biodiv_ncinv,parameter,global,ncinv,string,“habitatquality”
 lut0.carbon,variable,global,carbon,numeric,NA
 lut1.carbon,variable,global,carbon,numeric,NA
 lut0.price,variable,global,prices,numeric,NA
@@ -65,6 +69,7 @@ p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
 p.capitalstock.mean,variable,global,production,numeric,NA
+landscape_hq,variable,global,ncinv,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
