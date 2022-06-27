@@ -4,7 +4,6 @@
 # Refforts
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The Refforts package is intended to provide scripts for analyzing the
@@ -17,8 +16,12 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("nldoc/Refforts")
+devtools::install_github("EFForTS-B10/Refforts@dev")
 ```
+
+If another Refforts version is already installed, you’ll need to restart
+the R session:  
+Tab “Session” -\> “Restart R”
 
 ## Using functions with nlrx
 
@@ -74,7 +77,7 @@ nl@experiment <- experiment(
   tickmetrics = "true",
   idsetup = c("ca", "setup-with-external-maps"),
   idgo = c("go", "update-time"),
-  runtime = 50,
+  runtime = 50, # number of ticks
   metrics = get.abm.metrics(),
   constants = get.abm.defaults()
 )
@@ -205,10 +208,9 @@ This is a small use case to illustrate how this package can be used to
 run dynamic experiments with EFForTS-ABM.
 
 We want to simulate two different crops: oilpalm, and rubber. So we need
-to parameter folders to do that. However, we don`t want to use the
-default parameterisations, but we want to simulate a gradient of labor
-costs. We can use the wages parameter of the management file to achieve
-that. Let`s simulate a gradient from 1 to 2 with steps of 0.1.
+to parameter folders to do that. However, we
+don`t want to use the default parameterisations, but we want to simulate a gradient of labor costs. We can use the wages parameter of the management file to achieve that. Let`s
+simulate a gradient from 1 to 2 with steps of 0.1.
 
 First we generate the parameter folders:
 
@@ -243,7 +245,6 @@ a vector with all folder names, and then use this vector to set our
 model variables LUT-0-folder and LUT-1-folder.
 
 ``` r
-
 param.sets.rubber <- paste0(crops[1], "_wages_", wages)
 param.sets.oilpalm <- paste0(crops[2], "_wages_", wages)
 
@@ -306,7 +307,6 @@ possible to only use some metrics. Finally, the returned ggplot object
 can be plotted or visualized in an interactive way with plotly.
 
 ``` r
-
 nl <- nl_spatial
 
 timeplot <- doplot.abm.timeseries(nl, metrics = nl@experiment@metrics)
@@ -373,7 +373,7 @@ ggplot(series.cl, aes(x = time, y = price, color = factor(series))) +
 ```
 
 COMING NEXT: How to use this price data for setting parameter files in
-EFForTS ABM and run experiments\!
+EFForTS ABM and run experiments!
 
 ## Utility functions:
 
