@@ -1,6 +1,14 @@
 ###############################################
 ## Refforts Example (version "biodiv_birds") ##
 ###############################################
+
+## Install packages (if not installed yet)
+install.packages("nlrx")
+devtools::install_github("EFForTS-B10/Refforts@biodiv_birds")
+# if another Refforts version is already installed,
+# you'll need to restart the R session:
+# Tab "Session" -> "Restart R"
+
 ## Load packages
 library(nlrx)
 library(Refforts)
