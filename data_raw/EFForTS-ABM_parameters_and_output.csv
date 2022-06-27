@@ -44,10 +44,10 @@ write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
 show-homebases?,parameter,global,output,boolean,TRUE
 show-roads?,parameter,global,output,boolean,TRUE
-ncinv_experiment,parameter,global,ncinv,string,“exp1”
+ncinv_experiment,parameter,global,ncinv,string,"""exp1"""
 ecol_biodiv_interval,parameter,global,ncinv,numeric,1
 biodiv_ncinv_k,parameter,global,ncinv,numeric,0.05
-biodiv_ncinv,parameter,global,ncinv,string,“habitatquality”
+biodiv_ncinv,parameter,global,ncinv,string,"""habitatquality"""
 lut0.carbon,variable,global,carbon,numeric,NA
 lut1.carbon,variable,global,carbon,numeric,NA
 lut0.price,variable,global,prices,numeric,NA
