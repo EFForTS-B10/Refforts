@@ -2,6 +2,13 @@
 ## Refforts Example (version "biocontrol") ##
 #############################################
 
+## Install packages (if not installed yet)
+install.packages("nlrx")
+devtools::install_github("EFForTS-B10/Refforts@biocontrol")
+# if another Refforts version is already installed,
+# you'll need to restart the R session:
+# Tab "Session" -> "Restart R"
+
 ## Load packages
 library(nlrx)
 library(Refforts)
