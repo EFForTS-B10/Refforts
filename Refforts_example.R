@@ -4,7 +4,7 @@
 
 ## Install packages (if not installed yet)
 install.packages("nlrx")
-devtools::install_github("EFForTS-B10/Refforts@biocontrol")
+devtools::install_github("EFForTS-B10/Refforts@dev")
 # if another Refforts version is already installed,
 # you'll need to restart the R session:
 # Tab "Session" -> "Restart R"
