@@ -16,7 +16,7 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("EFForTS-B10/Refforts@main")
+devtools::install_github("EFForTS-B10/Refforts@conference_basti)
 ```
 
 If another Refforts version is already installed, you’ll need to restart

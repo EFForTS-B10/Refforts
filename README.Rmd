@@ -31,12 +31,15 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("EFForTS-B10/Refforts@main")
+devtools::install_github("EFForTS-B10/Refforts@conference_basti")
 ```
 If another Refforts version is already installed,
 you'll need to restart the R session:  
 Tab "Session" -> "Restart R"  
+<<<<<<< HEAD
 
+=======
+>>>>>>> biocontrol
 
 ## Using functions with nlrx
 

@@ -1,10 +1,10 @@
 #######################################
-## Refforts Example (version "main") ##
+## Refforts Example (version "conference_basti") ##
 #######################################
 
 ## Install packages (if not installed yet)
 install.packages("nlrx")
-devtools::install_github("EFForTS-B10/Refforts@main")
+devtools::install_github("EFForTS-B10/Refforts@conference_basti"")
 # if another Refforts version is already installed,
 # you'll need to restart the R session:
 # Tab "Session" -> "Restart R"
@@ -32,18 +32,18 @@ nl <- nl(
 ### Define function parameters ###
 metrics <- Refforts::get.abm.metrics()
 # Alternative: Define metrics manually
-# metrics <- c(
-#   "lut0.carbon", "lut1.carbon",
-#   "lut0.price", "lut1.price",
-#   "lut0.fraction", "lut1.fraction",
-#   "lut0.yield.sum", "lut1.yield.sum", "lut0.yield.mean", "lut1.yield.mean",
-#   "hh.count",
-#   "hh.area.sum", "hh.area.mean",
-#   "hh.consumption.sum", "hh.consumption.mean",
-#   "hh.lut0.ineff.mean", "hh.lut1.ineff.mean",
-#   "p.tinput.sum", "p.tinput.mean",
-#   "p.capitalstock.sum", "p.capitalstock.mean"
-# )
+# metrics <- c("lut0.carbon","lut1.carbon",
+#             "lut0.price","lut1.price",
+#             "lut0.fraction","lut1.fraction",
+#             "lut0.yield.sum","lut1.yield.sum","lut0.yield.mean","lut1.yield.mean",
+#             "hh.count",
+#             "hh.area.sum","hh.area.mean",
+#             "hh.consumption.sum","hh.consumption.mean",
+#             "hh.lut0.ineff.mean", "hh.lut1.ineff.mean",
+#             "p.tinput.sum","p.tinput.mean",
+#             "p.capitalstock.sum","p.capitalstock.mean",
+#             "p.predation.rate.mean" # only relevant for version "biocontrol" #versionspecific
+#)
 
 constants <- Refforts::get.abm.defaults()
 # Alternative: Define constants manually
@@ -122,3 +122,4 @@ setsim(nl, "simoutput") <- results
 ## Have a look at results:
 names(results)
 results$lut1.carbon
+results$p.predation.rate.mean
