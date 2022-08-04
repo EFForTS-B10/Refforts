@@ -61,7 +61,7 @@ write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
 show-homebases?,parameter,global,output,boolean,TRUE
 show-roads?,parameter,global,output,boolean,TRUE
-gr-reproducible? ,parameter,global,LGRaf,boolean,FALSE
+gr-reproducible?,parameter,global,LGRaf,boolean,FALSE
 gr-rnd-seed,parameter,global,LGRaf,numeric,100
 gr-width,parameter,global,LGRaf,numeric,100
 gr-height,parameter,global,LGRaf,numeric,100
