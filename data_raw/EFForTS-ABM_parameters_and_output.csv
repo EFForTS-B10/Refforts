@@ -21,7 +21,7 @@ consumption_frac_cash,parameter,global,consumption,numeric,0.1
 consumption_frac_wealth,parameter,global,consumption,numeric,0.05
 heterogeneous-hhs?,parameter,global,inefficiency,boolean,TRUE
 learning-spillover?,parameter,global,inefficiency,boolean,TRUE
-setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-n-nearest-neighbors"""
+setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-kernel-distance"""
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
@@ -37,8 +37,13 @@ discount-rate,parameter,global,capital,numeric,0.1
 land_price,parameter,global,capital,numeric,750
 external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.1
-rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
+rent_rate_capital_borrow,parameter,global,capital,numeric,0.1
 rent_rate_land,parameter,global,capital,numeric,0.1
+ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
+biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
+ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
+ncinv_test,parameter,global,biodiversity,string,"""test1"""
+biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
@@ -61,6 +66,7 @@ hh.consumption.sum,variable,global,household,numeric,NA
 hh.consumption.mean,variable,global,household,numeric,NA
 hh.lut0.ineff.mean,variable,global,household,numeric,NA
 hh.lut1.ineff.mean,variable,global,household,numeric,NA
+p.hq,variable,global,biodiversity,numeric,NA
 p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
@@ -69,7 +75,6 @@ p.predation.rate.mean,variable,global,biodiversity,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
-p_impact-location,variable,patches,biodiversity,boolean,NA
 p_landuse,variable,patches,landscape,numeric,NA
 p_management,variable,patches,management,numeric,NA
 p_road,variable,patches,landscape,numeric,NA
@@ -86,12 +91,12 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
-p_landuse_invest,variable,patches,biodiversity,numeric,NA
-p_habitat_quality,variable,patches,biodiversity,numeric,NA
+p_impact_ncinv,variable,patches,biodiversity,boolean,FALSE
+p_landuse_ncinv,variable,patches,biodiversity,numeric,NA
+p_hq_ncinv,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
-h_age,variable,turtles,hhage,numeric,NA
 h_area,variable,turtles,household,numeric,NA
 h_patches,variable,turtles,household,agentset,NA
 h_field_id_list,variable,turtles,household,list,NA
@@ -113,7 +118,6 @@ h_cost_land,variable,turtles,costs,numeric,NA
 h_revenue,variable,turtles,production,numeric,NA
 h_production,variable,turtles,production,numeric,NA
 h_inefficiencies,variable,turtles,inefficiency,list,NA
-h_immigrant?,variable,turtles,household,numeric,NA
 h_management,variable,turtles,management,list,NA
 h_land-use-change,variable,turtles,production,list,NA
 h_connected_hhs,variable,turtles,inefficiency,agentset,NA
