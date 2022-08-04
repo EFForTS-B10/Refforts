@@ -37,6 +37,7 @@ metrics <- Refforts::get.abm.metrics()
 #             "lut0.fraction","lut1.fraction",
 #             "lut0.yield.sum","lut1.yield.sum","lut0.yield.mean","lut1.yield.mean",
 #             "hh.count",
+#			  "hh.count.immigrant", # only relevant for version "landmarket" #versionspecific
 #             "hh.area.sum","hh.area.mean",
 #             "hh.consumption.sum","hh.consumption.mean",
 #             "hh.lut0.ineff.mean", "hh.lut1.ineff.mean",
@@ -74,6 +75,12 @@ constants <- Refforts::get.abm.defaults()
 #   "hh-nw-param2" = 50,
 #   "spillover-share" = 1,
 #   "h_debt_years_max_bankrupt" = 5,
+#   "landmarket?" = "TRUE", # only relevant for version "landmarket" #versionspecific
+#   "buyer_pool_n" = 10, # only relevant for version "landmarket" #versionspecific
+#   "immigrant_probability" = 0.5, # only relevant for version "landmarket" #versionspecific
+#   "land_price_increase" = 0.05, # only relevant for version "landmarket" #versionspecific
+#   "immigrant-xp-bonus" = "\"[0 0]\"", # only relevant for version "landmarket" #versionspecific
+#   "immigrant-wealth-factor" = 1, # only relevant for version "landmarket" #versionspecific
 #   "initial-wealth-distribution" = "\"log-normal\"",
 #   "init-wealth-correction-factor" = 10,
 #   "wealth-log-mean" = 7,
@@ -87,6 +94,12 @@ constants <- Refforts::get.abm.defaults()
 #   "rent_rate_capital_lend" = 0.1,
 #   "rent_rate_capital_borrow" = 0.15,
 #   "rent_rate_land" = 0.1,
+#   "hh_age_alpha" = 14.24, # only relevant for version "landmarket" #versionspecific
+#   "hh_age_lambda" = 0.31, # only relevant for version "landmarket" #versionspecific
+#   "hh_age_min" = 18, # only relevant for version "landmarket" #versionspecific
+#   "hh_age_max" = 80, # only relevant for version "landmarket" #versionspecific
+#   "age_generation" = 40, # only relevant for version "landmarket" #versionspecific
+#   "takeover_prob" = 0.5, # only relevant for version "landmarket" #versionspecific
 #   "write-maps?" = "FALSE",
 #   "write-hh-data-to-file?" = "FALSE",
 #   "export-view?" = "FALSE",
@@ -123,3 +136,4 @@ setsim(nl, "simoutput") <- results
 names(results)
 results$lut1.carbon
 results$p.predation.rate.mean
+results$hh.count.immigrant

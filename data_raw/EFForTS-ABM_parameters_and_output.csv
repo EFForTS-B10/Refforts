@@ -44,6 +44,12 @@ biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
 ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
 ncinv_test,parameter,global,biodiversity,string,"""test1"""
 biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
+hh_age_alpha,parameter,global,hhage,numeric,14.24
+hh_age_lambda,parameter,global,hhage,numeric,0.31
+hh_age_min,parameter,global,hhage,numeric,18
+hh_age_max,parameter,global,hhage,numeric,80
+age_generation,parameter,global,hhage,numeric,40
+takeover_prob,parameter,global,hhage,numeric,0.5
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
