@@ -50,6 +50,7 @@ biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
 ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
 ncinv_test,parameter,global,biodiversity,string,"""test1"""
 biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
+biodiv_birds,parameter,global,biodiversity,string,"""mahnken"""
 hh_age_alpha,parameter,global,hhage,numeric,14.24
 hh_age_lambda,parameter,global,hhage,numeric,0.31
 hh_age_min,parameter,global,hhage,numeric,18
