@@ -62,7 +62,7 @@ write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
 show-homebases?,parameter,global,output,boolean,TRUE
 show-roads?,parameter,global,output,boolean,TRUE
-gr-reproducible?,parameter,global,LGRaf,boolean,FALSE
+gr-reproducible?,parameter,global,LGRaf,boolean,TRUE
 gr-rnd-seed,parameter,global,LGRaf,numeric,100
 gr-width,parameter,global,LGRaf,numeric,100
 gr-height,parameter,global,LGRaf,numeric,100
@@ -74,7 +74,7 @@ gr-min-dist-roads,parameter,global,LGRaf,numeric,5
 gr-perlin-octaves,parameter,global,LGRaf,numeric,10
 gr-perlin-persistence,parameter,global,LGRaf,numeric,0.8
 gr-setup-model,parameter,global,LGRaf,string,"""number-of-households"""
-gr-number-of-households,parameter,global,LGRaf,numeric,701
+gr-number-of-households,parameter,global,LGRaf,numeric,100
 gr-number-of-villages,parameter,global,LGRaf,numeric,12
 gr-proportion-agricultural-area,parameter,global,LGRaf,numeric,0.3
 gr-households-per-cell,parameter,global,LGRaf,numeric,1
@@ -117,8 +117,8 @@ gr-LUT-1-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-2-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-3-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-4-specialize,parameter,global,LGRaf,numeric,0
-gr-default.maps,parameter,global,LGRaf,string," ""landuse-type"""
-gr-write-household-ids,parameter,global,LGRaf,string," ""only-first-households"""
+gr-default.maps,parameter,global,LGRaf,string," ""forestcluster"""
+gr-write-household-ids,parameter,global,LGRaf,string," ""layered-files"""
 lut0.carbon,variable,global,carbon,numeric,NA
 lut1.carbon,variable,global,carbon,numeric,NA
 lut0.price,variable,global,prices,numeric,NA
