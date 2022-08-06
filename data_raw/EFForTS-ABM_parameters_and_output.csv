@@ -105,8 +105,8 @@ gr-s3.nearby,parameter,global,LGRaf,boolean,TRUE
 gr-s4.avoid,parameter,global,LGRaf,boolean,TRUE
 gr-set-field-strategies-by-id?,parameter,global,LGRaf,boolean,FALSE
 gr-field-strategies-id,parameter,global,LGRaf,numeric,7
-gr-LUT-fill-up,parameter,global,LGRaf,string," ""LUT-1-fraction"""
-gr-land-use-types,parameter,global,LGRaf,string," ""household-level-specialization"""
+gr-LUT-fill-up,parameter,global,LGRaf,string,"""LUT-1-fraction"""
+gr-land-use-types,parameter,global,LGRaf,string,"""household-level-specialization"""
 gr-LUT-0-fraction,parameter,global,LGRaf,numeric,0.5
 gr-LUT-1-fraction,parameter,global,LGRaf,numeric,0.5
 gr-LUT-2-fraction,parameter,global,LGRaf,numeric,0
@@ -117,8 +117,8 @@ gr-LUT-1-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-2-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-3-specialize,parameter,global,LGRaf,numeric,0
 gr-LUT-4-specialize,parameter,global,LGRaf,numeric,0
-gr-default.maps,parameter,global,LGRaf,string," ""forestcluster"""
-gr-write-household-ids,parameter,global,LGRaf,string," ""layered-files"""
+gr-default.maps,parameter,global,LGRaf,string,"""forestcluster"""
+gr-write-household-ids,parameter,global,LGRaf,string,"""layered-files"""
 lut0.carbon,variable,global,carbon,numeric,NA
 lut1.carbon,variable,global,carbon,numeric,NA
 lut0.price,variable,global,prices,numeric,NA
