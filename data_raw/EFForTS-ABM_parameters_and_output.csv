@@ -25,13 +25,6 @@ setup-hh-network,parameter,global,inefficiency,string,"""hh-nw-kernel-distance""
 hh-nw-param1,parameter,global,inefficiency,numeric,10
 hh-nw-param2,parameter,global,inefficiency,numeric,50
 spillover-share,parameter,global,inefficiency,numeric,1
-landmarket?,parameter,global,landmarket,boolean,TRUE
-h_debt_years_max_bankrupt,parameter,global,landmarket,numeric,5
-buyer_pool_n,parameter,global,landmarket,numeric,20
-immigrant_probability,parameter,global,landmarket,numeric,0.25
-land_price_increase,parameter,global,landmarket,numeric,0.05
-immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]"""
-immigrant-wealth-factor,parameter,global,landmarket,numeric,13
 initial-wealth-distribution,parameter,global,wealth,string,"""log-normal"""
 init-wealth-correction-factor,parameter,global,wealth,numeric,10
 wealth-log-mean,parameter,global,wealth,numeric,7
@@ -45,12 +38,6 @@ external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.08
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
-ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
-biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
-ncinv_experiment,parameter,global,biodiversity,string,"""spatial_landuse"""
-ncinv_test,parameter,global,biodiversity,string,"""test1"""
-biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
-biodiv_birds,parameter,global,biodiversity,string,"""mahnken"""
 hh_age_alpha,parameter,global,hhage,numeric,14.24
 hh_age_lambda,parameter,global,hhage,numeric,0.31
 hh_age_min,parameter,global,hhage,numeric,18
@@ -141,7 +128,6 @@ p.tinput.sum,variable,global,production,numeric,NA
 p.tinput.mean,variable,global,production,numeric,NA
 p.capitalstock.sum,variable,global,production,numeric,NA
 p.capitalstock.mean,variable,global,production,numeric,NA
-p.predation.rate.mean,variable,global,biodiversity,numeric,NA
 pxcor,variable,patches,landscape,numeric,NA
 pycor,variable,patches,landscape,numeric,NA
 pcolor,variable,patches,landscape,numeric,NA
@@ -161,9 +147,6 @@ p_capitalstock,variable,patches,production,numeric,NA
 p_invest,variable,patches,production,numeric,NA
 p_actual_production,variable,patches,production,numeric,NA
 p_optimal_production,variable,patches,production,numeric,NA
-p_impact_ncinv,variable,patches,biodiversity,boolean,FALSE
-p_landuse_ncinv,variable,patches,biodiversity,numeric,NA
-p_hq_ncinv,variable,patches,biodiversity,numeric,NA
 who,variable,turtles,household,numeric,NA
 h_homebase,variable,turtles,household,agent,NA
 h_id,variable,turtles,household,numeric,NA
