@@ -38,12 +38,6 @@ external_income,parameter,global,capital,numeric,500
 rent_rate_capital_lend,parameter,global,capital,numeric,0.08
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15
 rent_rate_land,parameter,global,capital,numeric,0.1
-hh_age_alpha,parameter,global,hhage,numeric,14.24
-hh_age_lambda,parameter,global,hhage,numeric,0.31
-hh_age_min,parameter,global,hhage,numeric,18
-hh_age_max,parameter,global,hhage,numeric,80
-age_generation,parameter,global,hhage,numeric,40
-takeover_prob,parameter,global,hhage,numeric,0.5
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
