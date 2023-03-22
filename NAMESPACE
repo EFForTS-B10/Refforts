@@ -3,6 +3,8 @@
 export("%>%")
 export(doplot.abm.timeseries)
 export(get.abm.defaults)
+export(get.abm.mins)
+export(get.abm.maxs)
 export(get.abm.main.default)
 export(get.abm.management.default)
 export(get.abm.metrics)

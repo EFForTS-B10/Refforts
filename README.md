@@ -30,7 +30,14 @@ A list of default EFForTS-ABM parameters can be reported with:
 ``` r
 get.abm.defaults()
 ```
-
+A list of minimum EFForTS-ABM parameters can be reported with:
+``` r
+get.abm.mins()
+```
+A list of maximum EFForTS-ABM parameters can be reported with:
+``` r
+get.abm.maxs()
+```
 The underlying data can also be accessed as tibble:
 
 ``` r

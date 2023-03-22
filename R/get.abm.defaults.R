@@ -23,9 +23,9 @@ get.abm.defaults <- function() {
 #  utils::data("abm.table", envir=environment())
   dat <- abm.table %>%
     dplyr::filter(group == "parameter") %>%
-    dplyr::select(name, value)
+    dplyr::select(name, default)
 
-  dat.list <- lapply(as.list(dat$value), utils::type.convert, as.is=TRUE)
+  dat.list <- lapply(as.list(dat$default), utils::type.convert, as.is=TRUE)
   names(dat.list) <- dat$name
 
   return(dat.list)
