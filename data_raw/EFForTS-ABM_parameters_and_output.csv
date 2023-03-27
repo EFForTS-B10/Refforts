@@ -59,7 +59,7 @@ c_lut-1-agb,parameter,hardcoded,carbon_ncinv,numeric,37.57,NA,NA
 c_lut-1-bgb,parameter,hardcoded,carbon_ncinv,numeric,18.79,NA,NA
 c_lut-1-soc,parameter,hardcoded,carbon_ncinv,numeric,124.35,NA,NA
 c_lut-1-dead,parameter,hardcoded,carbon_ncinv,numeric,4.52,NA,NA
-ecol_biodiv_interval,parameter,global,biodiversity,numeric,1,NA,NA
+ecol_interval,parameter,global,ecological,numeric,1,NA,NA
 biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality""",NA,NA
 ncinv_experiment,parameter,global,biodiversity,string,"""exp1""",NA,NA
 ncinv_test,parameter,global,biodiversity,string,"""test1""",NA,NA
