@@ -72,7 +72,7 @@ hq_lut-0-sens-lut-0,parameter,global,biodiversity,numeric,1,0,1
 hq_lut-0-sens-lut-1,parameter,global,biodiversity,numeric,0,0,1
 hq_lut-1-sens-lut-0,parameter,global,biodiversity,numeric,1,0,1
 hq_lut-1-sens-lut-1,parameter,global,biodiversity,numeric,1,0,1
-biodiv_birds,parameter,global,birdrichness,string,"""mahnken""",NA,NA
+biodiv_birds,parameter,global,birdrichness,string,"""mahnken/koller""",NA,NA
 bird_spillover_effect,parameter,global,birdrichness,numeric,0.25,0.225,0.275
 bird_intercept,parameter,global,birdrichness,numeric,2.078083,1.8702747,2.2858913
 bird_pbeetle,parameter,global,birdrichness,numeric,0.027132,0.0244188,0.0298452
