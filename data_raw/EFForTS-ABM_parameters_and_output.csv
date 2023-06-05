@@ -146,10 +146,10 @@ p_road,variable,patches,landscape,numeric,NA,NA,NA
 p_age,variable,patches,production,numeric,NA,NA,NA
 p_fieldsize,variable,patches,landscape,numeric,NA,NA,NA
 p_carbon,variable,patches,carbon,numeric,NA,NA,NA
-p_carbon_soil,variable,patches,carbon_ncinv,numeric,NA,NA,NA
-p_carbon_dead,variable,patches,carbon_ncinv,numeric,NA,NA,NA
-p_carbon_above,variable,patches,carbon_ncinv,numeric,NA,NA,NA
-p_carbon_below,variable,patches,carbon_ncinv,numeric,NA,NA,NA
+p_carbon_soil_ncinv,variable,patches,carbon_ncinv,numeric,NA,NA,NA
+p_carbon_dead_ncinv,variable,patches,carbon_ncinv,numeric,NA,NA,NA
+p_carbon_above_ncinv,variable,patches,carbon_ncinv,numeric,NA,NA,NA
+p_carbon_below_ncinv,variable,patches,carbon_ncinv,numeric,NA,NA,NA
 p_owner,variable,patches,household,agent,NA,NA,NA
 p_homebase,variable,patches,household,numeric,NA,NA,NA
 p_production,variable,patches,production,numeric,NA,NA,NA
