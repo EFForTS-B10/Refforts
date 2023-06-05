@@ -39,7 +39,6 @@ rent_rate_capital_lend,parameter,global,capital,numeric,0.08,0.072,0.088
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15,0.135,0.165
 rent_rate_land,parameter,global,capital,numeric,0.1,0.09,0.11
 carbon_ncinv,parameter,global,carbon_ncinv,string,"""ncinv-carbon""",NA,NA
-ecol_interval,parameter,global,ecological,numeric,1,NA,NA
 ncinv_experiment,parameter,global,biodiversity,string,"""exp1""",NA,NA
 ncinv_test,parameter,global,biodiversity,string,"""test1""",NA,NA
 hh_age_alpha,parameter,global,hhage,numeric,14.24,12.816,15.664
