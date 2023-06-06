@@ -45,7 +45,7 @@ external_income,parameter,global,capital,numeric,500,450,550
 rent_rate_capital_lend,parameter,global,capital,numeric,0.08,0.072,0.088
 rent_rate_capital_borrow,parameter,global,capital,numeric,0.15,0.135,0.165
 rent_rate_land,parameter,global,capital,numeric,0.1,0.09,0.11
-carbon_ncinv,parameter,global,carbon_ncinv,string,"""ncinv-carbon""",NA,NA
+carbon_ncinv,parameter,global,carbon_ncinv,string,"""ncinv_carbon""",NA,NA
 sensitivity?,parameter,global,sensitivity,boolean,FALSE,NA,NA
 c_forest-agb,parameter,global,carbon_ncinv,numeric,89.4,80.46,98.34
 c_forest-bgb,parameter,global,carbon_ncinv,numeric,44.7,40.23,49.17
