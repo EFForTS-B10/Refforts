@@ -161,13 +161,14 @@ gr-LUT-4-specialize,parameter,global,LGRaf,numeric,0,NA,NA
 gr-default.maps,parameter,global,LGRaf,string,"""forestcluster""",NA,NA
 gr-write-household-ids,parameter,global,LGRaf,string,"""layered-files""",NA,NA
 ticks,variable,global,global,numeric,NA,NA,NA
+p.carbon.total.mean,variable,global,carbon_ncinv,numeric,NA,NA,NA
 p.carbon.soil.mean,variable,global,carbon_ncinv,numeric,NA,NA,NA
 p.carbon.dead.mean,variable,global,carbon_ncinv,numeric,NA,NA,NA
 p.carbon.above.mean,variable,global,carbon_ncinv,numeric,NA,NA,NA
 p.carbon.below.mean,variable,global,carbon_ncinv,numeric,NA,NA,NA
-p.carbon.min,variable,global,carbon_ncinv,numeric,NA,NA,NA
-p.carbon.max,variable,global,carbon_ncinv,numeric,NA,NA,NA
-p.carbon.sd,variable,global,carbon_ncinv,numeric,NA,NA,NA
+p.carbon.total.min,variable,global,carbon_ncinv,numeric,NA,NA,NA
+p.carbon.total.max,variable,global,carbon_ncinv,numeric,NA,NA,NA
+p.carbon.total.sd,variable,global,carbon_ncinv,numeric,NA,NA,NA
 lut0.price,variable,global,prices,numeric,NA,NA,NA
 lut1.price,variable,global,prices,numeric,NA,NA,NA
 lut0.fraction,variable,global,landscape,numeric,NA,NA,NA
