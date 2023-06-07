@@ -64,10 +64,10 @@ biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality""",NA,NA
 ncinv_experiment,parameter,global,biodiversity,string,"""exp1""",NA,NA
 ncinv_test,parameter,global,biodiversity,string,"""test1""",NA,NA
 biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05,NA,NA
-hq_lut-0-max-dist,parameter,global,biodiversity,numeric,0.1,0,0.15
-hq_lut-1-max-dist,parameter,global,biodiversity,numeric,0.1,0,0.15
-hq_lut-0-weight,parameter,global,biodiversity,numeric,10,1,20
-hq_lut-1-weight,parameter,global,biodiversity,numeric,1,1,20
+hq_lut-0-max-dist,parameter,global,biodiversity,numeric,0.25,0,0.5
+hq_lut-1-max-dist,parameter,global,biodiversity,numeric,0.25,0,0.5
+hq_lut-0-weight,parameter,global,biodiversity,numeric,0.89,0.801,0.979
+hq_lut-1-weight,parameter,global,biodiversity,numeric,0.56,0.504,0.616
 hq_lut-0-sens-lut-0,parameter,global,biodiversity,numeric,1,0,1
 hq_lut-0-sens-lut-1,parameter,global,biodiversity,numeric,0,0,1
 hq_lut-1-sens-lut-0,parameter,global,biodiversity,numeric,1,0,1
