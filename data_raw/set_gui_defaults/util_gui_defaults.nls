@@ -1,0 +1,226 @@
+to set-gui-parameters-to-default
+  
+  set-efforts-abm-defaults
+  set-efforts-lgraf-defaults
+  
+end
+
+
+
+to set-efforts-abm-defaults 
+
+  set reproducible? FALSE
+  set rnd-seed 3478436
+  set which-map "hundred-farmers3"
+  set land-use-change-decision "only-one-field-per-year"
+  set sim-time 50
+  set price_scenario "constant_prices"
+  set price-fluctuation-percent 10
+  set historical_smoothing 0
+  set LUT-0-folder "oilpalm"
+  set LUT-0-price 90
+  set LUT-0-price-mu 1.9
+  set LUT-0-price-sd 10
+  set LUT-1-folder "rubber"
+  set LUT-1-price 1100
+  set LUT-1-price-mu 11
+  set LUT-1-price-sd 100
+  set consumption-on? TRUE
+  set consumption_base 1000
+  set consumption_frac_cash 0.1
+  set consumption_frac_wealth 0.05
+  set heterogeneous-hhs? TRUE
+  set learning-spillover? TRUE
+  set setup-hh-network "hh-nw-kernel-distance"
+  set hh-nw-param1 10
+  set hh-nw-param2 50
+  set spillover-share 1
+  set landmarket? TRUE
+  set h_debt_years_max_bankrupt 5
+  set buyer_pool_n 20
+  set immigrant_probability 0.25
+  set land_price_increase 0.05
+  set immigrant-xp-bonus "[0 0]"
+  set immigrant-wealth-factor 13
+  set initial-wealth-distribution "log-normal"
+  set init-wealth-correction-factor 10
+  set wealth-log-mean 7
+  set wealth-log-sd 1
+  set wealth-constant 10000
+  set min-wealth 30
+  set time-horizon 10
+  set discount-rate 0.1
+  set land_price 750
+  set external_income 500
+  set rent_rate_capital_lend 0.08
+  set rent_rate_capital_borrow 0.15
+  set rent_rate_land 0.1
+  set carbon_ncinv "ncinv-carbon"
+  set sensitivity? FALSE
+  set c_forest-agb 89.4
+  set c_forest-bgb 44.7
+  set c_forest-soc 128.79
+  set c_forest-dead 18.123
+  set c_lut-0-agb 49.01
+  set c_lut-0-bgb 24.51
+  set c_lut-0-soc 121.55
+  set c_lut-0-dead 3.18
+  set c_lut-1-agb 37.57
+  set c_lut-1-bgb 18.79
+  set c_lut-1-soc 124.35
+  set c_lut-1-dead 4.52
+  set ecol_interval 1
+  set biodiv_ncinv "habitatquality"
+  set ncinv_experiment "exp1"
+  set ncinv_test "test1"
+  set biodiv_ncinv_k 0.05
+  set hq_lut-0-max-dist 0.25
+  set hq_lut-1-max-dist 0.25
+  set hq_immature-lut-0-max-dist 0.25
+  set hq_immature-lut-1-max-dist 0.25
+  set hq_lut-0-weight 0.89
+  set hq_lut-1-weight 0.56
+  set hq_immature-lut-0-weight 1
+  set hq_immature-lut-1-weight 1
+  set hq_lut-0-1-sens-lut-0 1
+  set hq_lut-0-1-sens-lut-1 0
+  set hq_lut-0-1-sens-immature-lut-0 1
+  set hq_lut-0-1-sens-immature-lut-1 1
+  set hq_lut-0-2-sens-lut-0 0.8
+  set hq_lut-0-2-sens-lut-1 0
+  set hq_lut-0-2-sens-immature-lut-0 1
+  set hq_lut-0-2-sens-immature-lut-1 1
+  set hq_lut-0-3-sens-lut-0 0.6
+  set hq_lut-0-3-sens-lut-1 0
+  set hq_lut-0-3-sens-immature-lut-0 1
+  set hq_lut-0-3-sens-immature-lut-1 1
+  set hq_lut-0-4-sens-lut-0 0.4
+  set hq_lut-0-4-sens-lut-1 0
+  set hq_lut-0-4-sens-immature-lut-0 1
+  set hq_lut-0-4-sens-immature-lut-1 1
+  set hq_lut-0-5-sens-lut-0 0.2
+  set hq_lut-0-5-sens-lut-1 0
+  set hq_lut-0-5-sens-immature-lut-0 1
+  set hq_lut-0-5-sens-immature-lut-1 1
+  set hq_lut-1-1-sens-lut-0 1
+  set hq_lut-1-1-sens-lut-1 1
+  set hq_lut-1-1-sens-immature-lut-0 1
+  set hq_lut-1-1-sens-immature-lut-1 1
+  set hq_lut-1-2-sens-lut-0 0.8
+  set hq_lut-1-2-sens-lut-1 0.8
+  set hq_lut-1-2-sens-immature-lut-0 1
+  set hq_lut-1-2-sens-immature-lut-1 1
+  set hq_lut-1-3-sens-lut-0 0.6
+  set hq_lut-1-3-sens-lut-1 0.6
+  set hq_lut-1-3-sens-immature-lut-0 1
+  set hq_lut-1-3-sens-immature-lut-1 1
+  set hq_lut-1-4-sens-lut-0 0.4
+  set hq_lut-1-4-sens-lut-1 0.4
+  set hq_lut-1-4-sens-immature-lut-0 1
+  set hq_lut-1-4-sens-immature-lut-1 1
+  set hq_lut-1-5-sens-lut-0 0.2
+  set hq_lut-1-5-sens-lut-1 0.2
+  set hq_lut-1-5-sens-immature-lut-0 1
+  set hq_lut-1-5-sens-immature-lut-1 1
+  set hq_forest-sens-lut-0 1
+  set hq_forest-sens-lut-1 1
+  set hq_forest-sens-immature-lut-0 1
+  set hq_forest-sens-immature-lut-1 1
+  set biodiv_birds "mahnken/koller"
+  set bird_spillover_effect 0.25
+  set bird_intercept 2.078083
+  set bird_pbeetle 0.027132
+  set bird_pant 0.010402
+  set bird_plud 0.476163
+  set bird_pcanopy 2.20185
+  set bc_r-intercept 0.307045
+  set bc_r-pzmax -0.051988
+  set bc_r-prubber 0.006531
+  set bc_r-pshdi -0.675094
+  set bc_op-intercept 0.761321
+  set bc_op-pzmax -0.114749
+  set bc_op-prubber 0.005093
+  set bc_op-pforest -0.016152
+  set bc_op-ped -66.190439
+  set bc_r-zmax-intercept 11.99827
+  set bc_r-zmax-page 0.46252
+  set bc_op-zmax-intercept 7.33052
+  set bc_op-zmax-page 0.43109
+  set hh_age_alpha 14.24
+  set hh_age_lambda 0.31
+  set hh_age_min 18
+  set hh_age_max 80
+  set age_generation 40
+  set takeover_prob 0.5
+  set write-maps? FALSE
+  set write-hh-data-to-file? FALSE
+  set export-view? FALSE
+  set show-homebases? TRUE
+  set show-roads? TRUE
+
+end
+ 
+ 
+
+to set-efforts-lgraf-defaults
+
+  set gr-reproducible? TRUE
+  set gr-rnd-seed 100
+  set gr-width 100
+  set gr-height 100
+  set gr-cell-length-meter 50
+  set gr-road.algorithm "real.shapefile"
+  set gr-total-road-length 1099
+  set gr-road-map-id "jambi1"
+  set gr-min-dist-roads 5
+  set gr-perlin-octaves 10
+  set gr-perlin-persistence 0.8
+  set gr-setup-model "number-of-households"
+  set gr-number-of-households 100
+  set gr-number-of-villages 12
+  set gr-proportion-agricultural-area 0.3
+  set gr-households-per-cell 1
+  set gr-cone-angle 120
+  set gr-dist-weight 0.6
+  set gr-hh-area-distribution "log-normal"
+  set gr-hh-area-mean-ha 1
+  set gr-hh-area-sd-ha 0.92
+  set gr-vlg-area-distribution "uniform"
+  set gr-vlg-area-mean 68.17
+  set gr-vlg-area-sd 56.73
+  set gr-occ-probability 0
+  set gr-hh-distribution "log-normal"
+  set gr-hh-type-mean 0.56
+  set gr-hh-type-sd 0.24
+  set gr-inaccessible-area-location "random"
+  set gr-inaccessible-area-distribution "normal"
+  set gr-inaccessible-area-fraction 0
+  set gr-inaccessible-area-mean 0.5
+  set gr-inaccessible-area-sd 10
+  set gr-field-size-distribution "log-normal"
+  set gr-field-size-mean-ha 0.49
+  set gr-field-size-sd-ha 0.77
+  set gr-change-strategy 2
+  set gr-s1.homebase TRUE
+  set gr-s2.fields TRUE
+  set gr-s3.nearby TRUE
+  set gr-s4.avoid TRUE
+  set gr-set-field-strategies-by-id? FALSE
+  set gr-field-strategies-id 7
+  set gr-LUT-fill-up "LUT-1-fraction"
+  set gr-land-use-types "household-level-specialization"
+  set gr-LUT-0-fraction 0.5
+  set gr-LUT-1-fraction 0.5
+  set gr-LUT-2-fraction 0
+  set gr-LUT-3-fraction 0
+  set gr-LUT-4-fraction 0
+  set gr-LUT-0-specialize 0
+  set gr-LUT-1-specialize 0
+  set gr-LUT-2-specialize 0
+  set gr-LUT-3-specialize 0
+  set gr-LUT-4-specialize 0
+  set gr-default.maps "forestcluster"
+  set gr-write-household-ids "layered-files"
+
+end
+

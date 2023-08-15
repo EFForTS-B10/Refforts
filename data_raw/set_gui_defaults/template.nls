@@ -1,0 +1,9 @@
+to set-gui-parameters-to-default
+  
+  set-efforts-abm-defaults
+  set-efforts-lgraf-defaults
+  
+end
+
+
+
