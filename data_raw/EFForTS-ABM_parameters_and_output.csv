@@ -266,6 +266,7 @@ p.tinput.sum,variable,global,production,numeric,NA,NA,NA,NA
 p.tinput.mean,variable,global,production,numeric,NA,NA,NA,NA
 p.capitalstock.sum,variable,global,production,numeric,NA,NA,NA,NA
 p.capitalstock.mean,variable,global,production,numeric,NA,NA,NA,NA
+p.biocontrol.oil.SF,variable,global,biocontrol,numeric,NA,NA,NA,NA
 p.biocontrol.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA
 p.biocontrol.sd,variable,global,biocontrol,numeric,NA,NA,NA,NA
 p.biocontrol.rub,variable,global,biocontrol,numeric,NA,NA,NA,NA
