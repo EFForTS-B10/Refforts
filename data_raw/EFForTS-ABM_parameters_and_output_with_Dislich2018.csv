@@ -15,7 +15,7 @@
 "14","LUT-1-price","parameter","global","prices","numeric","1100",990,1210,1100,"",1100,""
 "15","LUT-1-price-mu","parameter","global","prices","numeric","11",NA,NA,NA,"",0,""
 "16","LUT-1-price-sd","parameter","global","prices","numeric","100",NA,NA,NA,"",500,""
-"17","l_mng_price_tinput_management-0","parameter","global","prices","numeric","0.5",0.45,0.55,0.5,"","NA"0.5,"is called tinput-op and also exists as tinput-rm"
+"17","l_mng_price_tinput_management-0","parameter","global","prices","numeric","0.5",0.45,0.55,0.5,"","0.5","is called tinput-op and also exists as tinput-rm"
 "18","l_mng_wages_management-0","parameter","global","prices","numeric","1.6",1.44,1.76,1.6,"","1.6","there is wages-op and wages-rm, both 1.6"
 "19","consumption-on?","parameter","global","consumption","boolean","TRUE",NA,NA,NA,"",NA,""
 "20","consumption_base","parameter","global","consumption","numeric","1000",900,1100,1000,"",1000,""
