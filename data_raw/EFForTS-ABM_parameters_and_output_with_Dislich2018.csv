@@ -24,7 +24,7 @@
 "23","heterogeneous-hhs?","parameter","global","inefficiency","boolean","TRUE",NA,NA,NA,"",FALSE,""
 "24","learning-spillover?","parameter","global","inefficiency","boolean","TRUE",NA,NA,NA,"",FALSE,""
 "25","setup-hh-network","parameter","global","inefficiency","string","""hh-nw-kernel-distance""",NA,NA,"""hh-nw-kernel-distance""","","""hh-nw-kernel-distance""",""
-"26","hh-nw-param1","parameter","global","inefficiency","numeric","10",9,11,20,"I believe it used to be called Social network median kernel distance?","10"",""
+"26","hh-nw-param1","parameter","global","inefficiency","numeric","10",9,11,20,"I believe it used to be called Social network median kernel distance?","10",""
 "27","hh-nw-param2","parameter","global","inefficiency","numeric","50",45,55,50,"","50",""
 "28","spillover-share","parameter","global","inefficiency","numeric","1",0.9,1,NA,"is this the learning-diffusion-rate? then it would be 0.5 in the paper","1",""
 "29","l_inefficiency_alpha_lut-0","parameter","global","inefficiency","numeric","3.168",2.8512,3.4848,3.168,"","3.168",""
