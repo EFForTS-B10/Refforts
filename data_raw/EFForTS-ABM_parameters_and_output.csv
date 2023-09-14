@@ -3,7 +3,7 @@ reproducible?,parameter,global,setup,boolean,FALSE,NA,NA,NA
 rnd-seed,parameter,global,setup,numeric,3478436,NA,NA,NA
 which-map,parameter,global,setup,string,"""hundred-farmers3""",NA,NA,NA
 land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year""",NA,NA,NA
-sim-time,parameter,global,setup,numeric,50,NA,NA,NA
+sim-time,parameter,global,setup,numeric,61,NA,NA,NA
 price_scenario,parameter,global,prices,string,"""constant_prices""",NA,NA,NA
 price-fluctuation-percent,parameter,global,prices,numeric,10,NA,NA,NA
 historical_smoothing,parameter,global,prices,numeric,0,NA,NA,NA
@@ -61,6 +61,7 @@ l_depriciation_rate_switch_lut-0,parameter,global,capital,numeric,10,9,11,10
 l_depriciation_rate_switch_lut-1,parameter,global,capital,numeric,15,13.5,16.5,15
 l_max_age_lut-0,parameter,global,capital,numeric,25,22.5,27.5,30
 l_max_age_lut-1,parameter,global,capital,numeric,30,27,33,40
+dynamic-costs?,parameter,global,capital,numeric,FALSE,NA,NA,NA
 carbon_ncinv,parameter,global,carbon_ncinv,string,"""ncinv-carbon""",NA,NA,NA
 sensitivity?,parameter,global,sensitivity,boolean,TRUE,NA,NA,NA
 c_forest-agb,parameter,global,carbon_ncinv,numeric,89.4,80.46,98.34,NA
