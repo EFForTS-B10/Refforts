@@ -16,7 +16,9 @@
 rm(list = ls())
 
 ## Load csv with parameters:
-abm.table <- read.csv(file.path("data_raw", "EFForTS-ABM_parameters_and_output.csv"),
+# abm.table <- read.csv(file.path("data_raw", "EFForTS-ABM_parameters_and_output.csv"),
+                      # header = TRUE, sep = ",", stringsAsFactors = FALSE)
+abm.table <- read.csv(file.path("data_raw", "EFForTS-ABM_parameters_and_output_incl_new_slider.csv"),
                       header = TRUE, sep = ",", stringsAsFactors = FALSE)
 # define script names
 script_name   <- "util_gui_defaults.nls"

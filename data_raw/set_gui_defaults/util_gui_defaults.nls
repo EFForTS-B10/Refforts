@@ -25,6 +25,8 @@ to set-efforts-abm-defaults
   set LUT-1-price 1100
   set LUT-1-price-mu 11
   set LUT-1-price-sd 100
+  set l_mng_price_tinput_management-0 0.5
+  set l_mng_wages_management-0 1.6
   set consumption-on? TRUE
   set consumption_base 1000
   set consumption_frac_cash 0.1
@@ -35,6 +37,10 @@ to set-efforts-abm-defaults
   set hh-nw-param1 10
   set hh-nw-param2 50
   set spillover-share 1
+  set l_inefficiency_alpha_lut-0 3.168
+  set l_inefficiency_alpha_lut-1 3.445
+  set l_inefficiency_lambda_lut-0 0.069
+  set l_inefficiency_lambda_lut-1 0.093
   set landmarket? TRUE
   set h_debt_years_max_bankrupt 5
   set buyer_pool_n 20
@@ -55,8 +61,16 @@ to set-efforts-abm-defaults
   set rent_rate_capital_lend 0.08
   set rent_rate_capital_borrow 0.15
   set rent_rate_land 0.1
+  set l_depriciation_rate_young_lut-0 -0.1
+  set l_depriciation_rate_young_lut-1 -0.05
+  set l_depriciation_rate_old_lut-0 0.1
+  set l_depriciation_rate_old_lut-1 0.05
+  set l_depriciation_rate_switch_lut-0 10
+  set l_depriciation_rate_switch_lut-1 15
+  set l_max_age_lut-0 25
+  set l_max_age_lut-1 30
   set carbon_ncinv "ncinv-carbon"
-  set sensitivity? FALSE
+  set sensitivity? TRUE
   set c_forest-agb 89.4
   set c_forest-bgb 44.7
   set c_forest-soc 128.79
@@ -157,6 +171,27 @@ to set-efforts-abm-defaults
   set export-view? FALSE
   set show-homebases? TRUE
   set show-roads? TRUE
+  set b1 5
+  set b2 7
+  set b3 25
+  set m1 100
+  set m2 -80
+  set m3 -0.8
+  set n1 -230
+  set n2 690
+  set n3 115
+  set plateau_labor 1400
+  set b_labor 700
+  set m_lut-0 740
+  set m_lut-1 150
+  set quadratic_term -0.007
+  set linear_term 0.3
+  set constant 2.5
+  set intercept 46
+  set slope -0.6
+  set plateau_yield 40
+  set expo 0.7
+  set scal 0.3
 
 end
  
