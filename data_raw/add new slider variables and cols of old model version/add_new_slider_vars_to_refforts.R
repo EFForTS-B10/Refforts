@@ -8,7 +8,7 @@
 
 
 # load table
-abm.table <- read.csv("data_raw/EFForTS-ABM_parameters_and_output.csv", header=TRUE, sep=",", stringsAsFactors = FALSE)
+abm.table <- read.csv("data_raw/EFForTS-ABM_parameters_and_output_Dislich_and_model_2018.csv", header=TRUE, sep=",", stringsAsFactors = FALSE)
 
 # add new rows with var names:
 var_names <- c("b1", "b2", "b3", "m1", "m2", "m3", "n1", "n2", "n3",
@@ -30,6 +30,13 @@ for (x in 1:length(var_names)) {
   abm.table$max[n_rows + x]     <- var_defaults[x]*1.1
 
 }
+
+# add the defaults also to Dislich2018 and model2018
+abm.table$Dislich2018[(n_rows + 1):nrow(abm.table)] <- var_defaults
+abm.table$model2018[(n_rows + 1):nrow(abm.table)]   <- var_defaults
+# ! later manually correct in the model2018 col:
+#   -> n3 = 120
+
 
 # and write a new csv (or replace the old one if desired)
 write.csv(abm.table,
