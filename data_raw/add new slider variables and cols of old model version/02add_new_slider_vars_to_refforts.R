@@ -40,4 +40,4 @@ abm.table$model2018[(n_rows + 1):nrow(abm.table)]   <- var_defaults
 
 # and write a new csv (or replace the old one if desired)
 write.csv(abm.table,
-          "data_raw/EFForTS-ABM_parameters_and_output_incl_new_slider.csv")
+          "data_raw/EFForTS-ABM_parameters_and_output_incl_everything.csv")

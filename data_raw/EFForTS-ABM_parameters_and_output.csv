@@ -3,7 +3,7 @@ reproducible?,parameter,global,setup,boolean,FALSE,NA,NA,NA
 rnd-seed,parameter,global,setup,numeric,3478436,NA,NA,NA
 which-map,parameter,global,setup,string,"""hundred-farmers3""",NA,NA,NA
 land-use-change-decision,parameter,global,setup,string,"""only-one-field-per-year""",NA,NA,NA
-sim-time,parameter,global,setup,numeric,50,NA,NA,NA
+sim-time,parameter,global,setup,numeric,61,NA,NA,NA
 price_scenario,parameter,global,prices,string,"""constant_prices""",NA,NA,NA
 price-fluctuation-percent,parameter,global,prices,numeric,10,NA,NA,NA
 historical_smoothing,parameter,global,prices,numeric,0,NA,NA,NA
@@ -17,6 +17,8 @@ LUT-1-price-mu,parameter,global,prices,numeric,11,NA,NA,NA
 LUT-1-price-sd,parameter,global,prices,numeric,100,NA,NA,NA
 l_mng_price_tinput_management-0,parameter,global,prices,numeric,0.5,0.45,0.55,0.5
 l_mng_wages_management-0,parameter,global,prices,numeric,1.6,1.44,1.76,1.6
+optimal-invest-costs_lut-0,parameter,global,prices,numeric,"""[600 200 150]""","""[540 180 135]""","""[660 220 165]""","""[600 200 150]"""
+optimal-invest-costs_lut-1,parameter,global,prices,numeric,"""[200 70 70 70 70]""","""[180 63 63 63 63]""","""[220 77 77 77 77]""","""[200 70 70 70 70]"""
 consumption-on?,parameter,global,consumption,boolean,TRUE,NA,NA,NA
 consumption_base,parameter,global,consumption,numeric,1000,900,1100,1000
 consumption_frac_cash,parameter,global,consumption,numeric,0.1,0.09,0.11,0.1
@@ -59,6 +61,7 @@ l_depriciation_rate_switch_lut-0,parameter,global,capital,numeric,10,9,11,10
 l_depriciation_rate_switch_lut-1,parameter,global,capital,numeric,15,13.5,16.5,15
 l_max_age_lut-0,parameter,global,capital,numeric,25,22.5,27.5,30
 l_max_age_lut-1,parameter,global,capital,numeric,30,27,33,40
+dynamic-costs?,parameter,global,capital,numeric,FALSE,NA,NA,NA
 carbon_ncinv,parameter,global,carbon_ncinv,string,"""ncinv-carbon""",NA,NA,NA
 sensitivity?,parameter,global,sensitivity,boolean,TRUE,NA,NA,NA
 c_forest-agb,parameter,global,carbon_ncinv,numeric,89.4,80.46,98.34,NA

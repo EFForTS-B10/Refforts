@@ -1,6 +1,11 @@
+####     add the new columns wit data from Dislich et al and the 2018 version
+#        of efforts-abm
+
+# author: Luka
+# date  : 26/09/23
+
 
 # load packages
-library(readxl)
 library(dplyr)
 
 rm(list = ls())
@@ -31,33 +36,31 @@ class(exc_abm$max) <- class(abm.table$max)
 
 # compare the defaults of abm and excel
 # merge dfs
-test <- right_join(abm.table, exc_abm[, colnames(abm.table)])
+test <- left_join(abm.table, exc_abm[, colnames(abm.table)])
 
 # and check the new df:
 # 1. show the new variable names:
-test[!test$name %in% abm.table$name,]
+test[!test$name %in% exc_abm$name,]
 
 # 2. show where defaults are different
-abm_check <- data.frame(name= abm.table$name, abm = abm.table$default)
+exc_check <- data.frame(name= exc_abm$name, abm = exc_abm$default)
 test_check <- data.frame(name = test$name, test = test$default)
-joint <- full_join(abm_check, test_check) %>%
+joint <- full_join(exc_check, test_check) %>%
   mutate(comparison = (abm == test)) %>%
   filter(comparison == FALSE)
-### ----> no more differences (now that I read in the excel data as csv, it is fine)
+joint
+### ----> sim time is different!
 
-
-
-# So I simply rowbind to include the 2 new rows from excel and add in the order I wish
-new_rows <- exc_abm[!exc_abm$name %in% abm.table$name, colnames(abm.table)]
-index    <- which(exc_abm$name == "optimal-invest-costs_lut-0")
-new_abm.table <- abm.table[1:index-1,] %>%
-  rbind(new_rows) %>%
-  rbind(abm.table[index:nrow(abm.table),])
+# clear environment:
+rm(joint)
+rm(test)
+rm(test_check)
+rm(exc_check)
 
 
 
 # add Dislich et al and model 2018 columns --------------------------------
-new_abm.table <- full_join(new_abm.table, exc_abm[, c("name", "Dislich2018", "model2018")])
+new_abm.table <- full_join(abm.table, exc_abm[, c("name", "Dislich2018", "model2018")])
 
 
 
