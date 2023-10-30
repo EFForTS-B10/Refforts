@@ -307,7 +307,6 @@ p.biocontrol.lut1.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.biocontrol.rub.sd,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.biocontrol.lut0.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.biocontrol.oil.sd,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
-p.biocontrol.forest.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.zmax.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.rubber_prop.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.shdi.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
