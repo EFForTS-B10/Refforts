@@ -27,7 +27,7 @@ m2,parameter,global,costs,numeric,-80,-88,-72,-80,-80
 m3,parameter,global,costs,numeric,-0.8,-0.88,-0.72,-0.8,-0.8
 n1,parameter,global,costs,numeric,-230,-253,-207,-230,-230
 n2,parameter,global,costs,numeric,690,621,759,690,690
-n3,parameter,global,costs,numeric,115,103.5,126.5,115,120
+n3,parameter,global,costs,numeric,120,108,132,120,120
 plateau_labor,parameter,global,costs,numeric,1400,1260,1540,1400,1400
 b_labor,parameter,global,costs,numeric,700,630,770,700,700
 m_lut-0,parameter,global,costs,numeric,740,666,814,740,740
@@ -40,6 +40,13 @@ slope,parameter,global,costs,numeric,-0.6,-0.66,-0.54,-0.6,-0.6
 plateau_yield,parameter,global,costs,numeric,40,36,44,40,40
 expo,parameter,global,costs,numeric,0.7,0.63,0.77,0.7,0.7
 scal,parameter,global,costs,numeric,0.3,0.27,0.33,0.3,0.3
+lut0_carbon_factor,parameter,global,costs,numeric,18.95,17.055,20.845,18.95,18.95
+lut0_carbon_exp,parameter,global,costs,numeric,0.5,0.45,0.55,0.5,0.5
+lut0_carbon_content,parameter,global,costs,numeric,0.413,0.3717,0.4543,0.413,0.413
+lut0_root_shoot_ratio,parameter,global,costs,numeric,1.35,1.215,1.485,1.35,1.35
+lut1_carbon_factor,parameter,global,costs,numeric,58.609,52.7481,64.4699,58.609, 58.609
+lut1_carbon_exp1,parameter,global,costs,numeric,-13.696,-15.0656,-12.3264,-13.696,-13.696
+lut1_carbon_exp2,parameter,global,costs,numeric,-0.264,-0.2904,-0.2376,-0.264,-0.264
 consumption-on?,parameter,global,consumption,boolean,TRUE,NA,NA,NA,NA
 consumption_base,parameter,global,consumption,numeric,1000,900,1100,1000,1000
 consumption_frac_cash,parameter,global,consumption,numeric,0.1,0.09,0.11,0.1,0.1

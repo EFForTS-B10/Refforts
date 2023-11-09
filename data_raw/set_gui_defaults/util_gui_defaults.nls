@@ -37,7 +37,7 @@ to set-efforts-abm-defaults
   set m3 -0.8
   set n1 -230
   set n2 690
-  set n3 115
+  set n3 120
   set plateau_labor 1400
   set b_labor 700
   set m_lut-0 740
@@ -50,6 +50,13 @@ to set-efforts-abm-defaults
   set plateau_yield 40
   set expo 0.7
   set scal 0.3
+  set lut0_carbon_factor 18.95
+  set lut0_carbon_exp 0.5
+  set lut0_carbon_content 0.413
+  set lut0_root_shoot_ratio 1.35
+  set lut1_carbon_factor 58.609
+  set lut1_carbon_exp1 -13.696
+  set lut1_carbon_exp2 -0.264
   set consumption-on? TRUE
   set consumption_base 1000
   set consumption_frac_cash 0.1
