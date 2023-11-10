@@ -44,7 +44,7 @@ lut0_carbon_factor,parameter,global,costs,numeric,18.95,17.055,20.845,18.95,18.9
 lut0_carbon_exp,parameter,global,costs,numeric,0.5,0.45,0.55,0.5,0.5
 lut0_carbon_content,parameter,global,costs,numeric,0.413,0.3717,0.4543,0.413,0.413
 lut0_root_shoot_ratio,parameter,global,costs,numeric,1.35,1.215,1.485,1.35,1.35
-lut1_carbon_factor,parameter,global,costs,numeric,58.609,52.7481,64.4699,58.609, 58.609
+lut1_carbon_factor,parameter,global,costs,numeric,58.609,52.7481,64.4699,58.609,58.609
 lut1_carbon_exp1,parameter,global,costs,numeric,-13.696,-15.0656,-12.3264,-13.696,-13.696
 lut1_carbon_exp2,parameter,global,costs,numeric,-0.264,-0.2904,-0.2376,-0.264,-0.264
 consumption-on?,parameter,global,consumption,boolean,TRUE,NA,NA,NA,NA
@@ -66,7 +66,7 @@ h_debt_years_max_bankrupt,parameter,global,landmarket,numeric,5,4,6,5,5
 buyer_pool_n,parameter,global,landmarket,numeric,20,18,22,NA,NA
 immigrant_probability,parameter,global,landmarket,numeric,0.25,0.225,0.275,NA,NA
 land_price_increase,parameter,global,landmarket,numeric,0.05,0.045,0.055,NA,NA
-immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]""",NA,NA,NA,NA
+immigrant-xp-bonus,parameter,global,landmarket,string,"""[0 0]""","""[0.1 0.1]""","""[0.9 0.9]""",NA,NA
 immigrant-wealth-factor,parameter,global,landmarket,numeric,13,11.7,14.3,NA,NA
 initial-wealth-distribution,parameter,global,wealth,string,"""log-normal""",NA,NA,"""log-normal""","""log-normal"""
 init-wealth-correction-factor,parameter,global,wealth,numeric,10,9,11,10,10
