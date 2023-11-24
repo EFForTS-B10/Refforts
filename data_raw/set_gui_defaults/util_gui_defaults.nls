@@ -63,7 +63,7 @@ to set-efforts-abm-defaults
   set consumption_frac_wealth 0.05
   set heterogeneous-hhs? TRUE
   set learning-spillover? TRUE
-  set setup-hh-network "hh-nw-kernel-distance"
+  set setup-hh-network "hh-nw-n-nearest-neighbors"
   set hh-nw-param1 10
   set hh-nw-param2 50
   set spillover-share 1
