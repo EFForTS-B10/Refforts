@@ -303,6 +303,7 @@ p.hq.sd,variable,global,biodiversity,numeric,NA,NA,NA,NA,NA
 p.hq.forest.mean,variable,global,biodiversity,numeric,NA,NA,NA,NA,NA
 p.hq.lut0.mean,variable,global,biodiversity,numeric,NA,NA,NA,NA,NA
 p.hq.lut1.mean,variable,global,biodiversity,numeric,NA,NA,NA,NA,NA
+p.hq.mean_no_fallow_land,variable,global,biodiversity,numeric,NA,NA,NA,NA,NA
 p.tinput.sum,variable,global,production,numeric,NA,NA,NA,NA,NA
 p.tinput.mean,variable,global,production,numeric,NA,NA,NA,NA,NA
 p.capitalstock.sum,variable,global,production,numeric,NA,NA,NA,NA,NA
@@ -322,6 +323,7 @@ p.ed_prop.mean,variable,global,biocontrol,numeric,NA,NA,NA,NA,NA
 p.bird.richness.max,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
 p.bird.richness.min,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
 p.bird.richness.mean,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
+p.bird.mean_no_fallow_land,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
 p.bird.lut0.mean,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
 p.bird.lut1.mean,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
 p.bird.forest.mean,variable,global,birdrichness,numeric,NA,NA,NA,NA,NA
