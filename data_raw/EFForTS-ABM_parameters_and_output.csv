@@ -51,6 +51,10 @@ hq_lut-0-weight,parameter,global,biodiversity,numeric,0.89
 hq_lut-1-weight,parameter,global,biodiversity,numeric,0.56
 hq_immature-lut-0-weight,parameter,global,biodiversity,numeric,1
 hq_immature-lut-1-weight,parameter,global,biodiversity,numeric,1
+hq_lut-0-decay,parameter,global,biodiversity,string,"""linear"""
+hq_lut-1-decay,parameter,global,biodiversity,string,"""linear"""
+hq_immature-lut-0-decay,parameter,global,biodiversity,string,"""linear"""
+hq_immature-lut-1-decay,parameter,global,biodiversity,string,"""linear"""
 hq_lut-0-1-habitat,parameter,global,biodiversity,numeric,1
 hq_lut-0-2-habitat,parameter,global,biodiversity,numeric,1
 hq_lut-0-3-habitat,parameter,global,biodiversity,numeric,1
