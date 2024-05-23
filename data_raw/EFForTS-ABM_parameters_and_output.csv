@@ -42,7 +42,7 @@ ecol_biodiv_interval,parameter,global,biodiversity,numeric,1
 biodiv_ncinv,parameter,global,biodiversity,string,"""habitatquality"""
 ncinv_experiment,parameter,global,biodiversity,string,"""experiment1"""
 ncinv_test,parameter,global,biodiversity,string,"""test1"""
-biodiv_ncinv_k,parameter,global,biodiversity,numeric,0.05
+hq_k,parameter,global,biodiversity,numeric,0.05
 hq_lut-0-max-dist,parameter,global,biodiversity,numeric,0.25
 hq_lut-1-max-dist,parameter,global,biodiversity,numeric,0.25
 hq_immature-lut-0-max-dist,parameter,global,biodiversity,numeric,0.25
@@ -109,7 +109,7 @@ hq_forest-sens-lut-0,parameter,global,biodiversity,numeric,1
 hq_forest-sens-lut-1,parameter,global,biodiversity,numeric,1
 hq_forest-sens-immature-lut-0,parameter,global,biodiversity,numeric,1
 hq_forest-sens-immature-lut-1,parameter,global,biodiversity,numeric,1
-hq_lulc-sensi, parameter,global,biodiversity,string,"""age"""
+hq_lulc-sensi,parameter,global,biodiversity,string,"""age"""
 hq_lut0-limit1,parameter,global,biodiversity,numeric,3
 hq_lut0-limit2,parameter,global,biodiversity,numeric,10
 hq_lut0-limit3,parameter,global,biodiversity,numeric,15
