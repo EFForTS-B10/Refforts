@@ -109,12 +109,13 @@ hq_forest-sens-lut-0,parameter,global,biodiversity,numeric,1
 hq_forest-sens-lut-1,parameter,global,biodiversity,numeric,1
 hq_forest-sens-immature-lut-0,parameter,global,biodiversity,numeric,1
 hq_forest-sens-immature-lut-1,parameter,global,biodiversity,numeric,1
-biodiv_ncinv_lut0_limit1,parameter,global,biodiversity,numeric,3
-biodiv_ncinv_lut0_limit2,parameter,global,biodiversity,numeric,10
-biodiv_ncinv_lut0_limit3,parameter,global,biodiversity,numeric,15
-biodiv_ncinv_lut1_limit1,parameter,global,biodiversity,numeric,5
-biodiv_ncinv_lut1_limit2,parameter,global,biodiversity,numeric,10
-biodiv_ncinv_lut1_limit3,parameter,global,biodiversity,numeric,15
+hq_lulc-sensi, parameter,global,biodiversity,string,"""age"""
+hq_lut0-limit1,parameter,global,biodiversity,numeric,3
+hq_lut0-limit2,parameter,global,biodiversity,numeric,10
+hq_lut0-limit3,parameter,global,biodiversity,numeric,15
+hq_lut1-limit1,parameter,global,biodiversity,numeric,5
+hq_lut1-limit2,parameter,global,biodiversity,numeric,10
+hq_lut1-limit3,parameter,global,biodiversity,numeric,15
 write-maps?,parameter,global,output,boolean,FALSE
 write-hh-data-to-file?,parameter,global,output,boolean,FALSE
 export-view?,parameter,global,output,boolean,FALSE
