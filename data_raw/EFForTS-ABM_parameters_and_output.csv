@@ -355,7 +355,6 @@ p.carbon.total.max,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon.total.sd,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon-biomass-ncinv.lut0.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon-biomass-ncinv.lut1.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
-p.carbon-biomass-ncinv.lut2.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon-biomass-ncinv.forest.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon-total-ncinv.lut0.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
 p.carbon-total-ncinv.lut1.mean,,variable,global,carbon_ncinv,numeric,NA,NA,NA,NA,NA
