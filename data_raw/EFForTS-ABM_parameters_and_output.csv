@@ -259,6 +259,7 @@ bird_pbeetle,,parameter,global,birdrichness,numeric,0.027132,0.0244188,0.0298452
 bird_pant,,parameter,global,birdrichness,numeric,0.010402,0.0093618,0.0114422,NA,NA
 bird_plud,,parameter,global,birdrichness,numeric,0.476163,0.4285467,0.5237793,NA,NA
 bird_pcanopy,,parameter,global,birdrichness,numeric,2.20185,1.981665,2.422035,NA,NA
+biocontrol,,parameter,global,biocontrol,string,"""none""",NA,NA,NA,NA
 bc_r-intercept,,parameter,global,biocontrol,numeric,0.307045,0.2763405,0.3377495,NA,NA
 bc_r-pzmax,,parameter,global,biocontrol,numeric,-0.051988,-0.0571868,-0.0467892,NA,NA
 bc_r-prubber,,parameter,global,biocontrol,numeric,0.006531,0.0058779,0.0071841,NA,NA
@@ -328,9 +329,9 @@ gr-set-field-strategies-by-id?,,parameter,global,LGRaf,boolean,FALSE,NA,NA,NA,NA
 gr-field-strategies-id,,parameter,global,LGRaf,numeric,7,NA,NA,NA,NA
 gr-LUT-fill-up,,parameter,global,LGRaf,string,"""LUT-1-fraction""",NA,NA,NA,NA
 gr-land-use-types,,parameter,global,LGRaf,string,"""household-level-specialization""",NA,NA,NA,NA
-gr-LUT-0-fraction,,parameter,global,LGRaf,numeric,0.5,NA,NA,0.5,NA
-gr-LUT-1-fraction,,parameter,global,LGRaf,numeric,0.5,NA,NA,0.5,NA
-gr-LUT-2-fraction,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
+gr-LUT-0-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,0.5,NA
+gr-LUT-1-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,0.5,NA
+gr-LUT-2-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,NA,NA
 gr-LUT-3-fraction,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-LUT-4-fraction,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-LUT-0-specialize,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
