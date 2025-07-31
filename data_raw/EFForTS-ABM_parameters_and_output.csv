@@ -329,9 +329,9 @@ gr-set-field-strategies-by-id?,,parameter,global,LGRaf,boolean,FALSE,NA,NA,NA,NA
 gr-field-strategies-id,,parameter,global,LGRaf,numeric,7,NA,NA,NA,NA
 gr-LUT-fill-up,,parameter,global,LGRaf,string,"""LUT-1-fraction""",NA,NA,NA,NA
 gr-land-use-types,,parameter,global,LGRaf,string,"""household-level-specialization""",NA,NA,NA,NA
-gr-LUT-0-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,0.5,NA
-gr-LUT-1-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,0.5,NA
-gr-LUT-2-fraction,,parameter,global,LGRaf,numeric,0.33,NA,NA,NA,NA
+gr-LUT-0-fraction,,parameter,global,LGRaf,numeric,0.60,NA,NA,0.5,NA
+gr-LUT-1-fraction,,parameter,global,LGRaf,numeric,0.20,NA,NA,0.5,NA
+gr-LUT-2-fraction,,parameter,global,LGRaf,numeric,0.20,NA,NA,NA,NA
 gr-LUT-3-fraction,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-LUT-4-fraction,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-LUT-0-specialize,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
