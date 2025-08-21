@@ -238,6 +238,7 @@ gr-hh-area-sd-ha,,parameter,global,LGRaf,numeric,0.92,NA,NA,0.92,NA
 gr-vlg-area-distribution,,parameter,global,LGRaf,string,"""uniform""",NA,NA,NA,NA
 gr-vlg-area-mean,,parameter,global,LGRaf,numeric,68.17,NA,NA,NA,NA
 gr-vlg-area-sd,,parameter,global,LGRaf,numeric,56.73,NA,NA,NA,NA
+gr-min-distance,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-occ-probability,,parameter,global,LGRaf,numeric,0,NA,NA,NA,NA
 gr-hh-distribution,,parameter,global,LGRaf,string,"""log-normal""",NA,NA,NA,NA
 gr-hh-type-mean,,parameter,global,LGRaf,numeric,0.56,NA,NA,NA,NA
