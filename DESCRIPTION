@@ -25,4 +25,4 @@ Imports:
     tibble,
     ssh
 Depends:
-    R (>= 3.3)
+    R (>= 3.5)
