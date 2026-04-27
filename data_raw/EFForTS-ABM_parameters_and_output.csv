@@ -292,6 +292,8 @@ p.carbon-total-ncinv.lut1.mean;;variable;global;carbon_ncinv;numeric;NA;NA;NA;NA
 p.carbon-total-ncinv.forest.mean;;variable;global;carbon_ncinv;numeric;NA;NA;NA;NA;NA
 lut0.price;;variable;global;prices;numeric;NA;NA;NA;NA;NA
 lut1.price;;variable;global;prices;numeric;NA;NA;NA;NA;NA
+lut0.fraction.original;;variable;global;prices;numeric;NA;NA;NA;NA;NA
+lut1.fraction.original;;variable;global;prices;numeric;NA;NA;NA;NA;NA
 lut0.fraction;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut1.fraction;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut0.fraction.owned;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
