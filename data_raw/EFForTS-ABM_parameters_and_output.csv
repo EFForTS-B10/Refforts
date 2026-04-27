@@ -296,6 +296,8 @@ lut0.fraction;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut1.fraction;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut0.fraction.owned;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut1.fraction.owned;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
+lut0.fraction.fallow;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
+lut1.fraction.fallow;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut0.fraction.landscape;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 lut1.fraction.landscape;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
 forest.fraction.landscape;;variable;global;landscape;numeric;NA;NA;NA;NA;NA
