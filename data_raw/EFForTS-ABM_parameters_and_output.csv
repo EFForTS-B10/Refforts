@@ -109,10 +109,10 @@ biodiv_ncinv;;parameter;global;biodiversity;string;"""habitatquality""";NA;NA;NA
 ncinv_experiment;;parameter;global;biodiversity;string;"""exp1""";NA;NA;NA;NA
 ncinv_test;;parameter;global;biodiversity;string;"""test1""";NA;NA;NA;NA
 biodiv_ncinv_k;;parameter;global;biodiversity;numeric;0.05;NA;NA;NA;NA
-hq_lut-0-max-dist;;parameter;global;biodiversity;numeric;0.2;0.15;0.25;NA;NA
-hq_lut-1-max-dist;;parameter;global;biodiversity;numeric;0.2;0.15;0.25;NA;NA
-hq_immature-lut-0-max-dist;;parameter;global;biodiversity;numeric;0.2;0.15;0.25;NA;NA
-hq_immature-lut-1-max-dist;;parameter;global;biodiversity;numeric;0.2;0.15;0.25;NA;NA
+hq_lut-0-max-dist;;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_lut-1-max-dist;;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_immature-lut-0-max-dist;;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_immature-lut-1-max-dist;;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
 hq_lut-0-weight;;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
 hq_lut-1-weight;;parameter;global;biodiversity;numeric;0.36;0.324;0.374;NA;NA
 hq_immature-lut-0-weight;;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
