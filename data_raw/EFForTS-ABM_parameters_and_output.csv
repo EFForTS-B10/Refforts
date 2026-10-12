@@ -48,7 +48,7 @@ lut1_carbon_factor;NA;NA;parameter;global;carbon_old;numeric;58.609;52.7481;64.4
 lut1_carbon_exp1;NA;NA;parameter;global;carbon_old;numeric;-13.696;-15.0656;-12.3264;-13.696;-13.696
 lut1_carbon_exp2;NA;NA;parameter;global;carbon_old;numeric;-0.264;-0.2904;-0.2376;-0.264;-0.264
 consumption-on?;NA;NA;parameter;global;consumption;boolean;TRUE;NA;NA;NA;NA
-consumption_base;C_-;USD;parameter;global;consumption;numeric;1000;900;1100;1000;1000
+consumption_base;C;USD;parameter;global;consumption;numeric;1000;900;1100;1000;1000
 consumption_frac_cash;C_pi;-;parameter;global;consumption;numeric;0.1;0.09;0.11;0.1;0.1
 consumption_frac_wealth;C_W;-;parameter;global;consumption;numeric;0.05;0.045;0.055;0.05;0.05
 heterogeneous-hhs?;NA;NA;parameter;global;inefficiency;boolean;TRUE;NA;NA;NA;FALSE
@@ -65,7 +65,7 @@ landmarket?;NA;NA;parameter;global;landmarket;boolean;TRUE;NA;NA;NA;NA
 h_debt_years_max_bankrupt;D_max;years;parameter;global;landmarket;numeric;5;4;6;5;5
 buyer_pool_n;buyer_p;number;parameter;global;landmarket;numeric;20;18;22;NA;NA
 immigrant_probability;immi_p;-;parameter;global;landmarket;numeric;0.25;0.225;0.275;NA;NA
-land_price_increase;p_L_inc;-;parameter;global;landmarket;numeric;0.05;0.045;0.055;NA;NA
+land_price_increase;p_L,inc;-;parameter;global;landmarket;numeric;0.05;0.045;0.055;NA;NA
 immigrant-xp-bonus;immi_b;-;parameter;global;landmarket;string;"""[0 0]""";"""[0.1 0.1]""";"""[0.9 0.9]""";NA;NA
 immigrant-wealth-factor;immi_w;-;parameter;global;landmarket;numeric;13;11.7;14.3;NA;NA
 initial-wealth-distribution;NA;NA;parameter;global;wealth;string;"""log-normal""";NA;NA;"""log-normal""";"""log-normal"""
@@ -77,8 +77,8 @@ min-wealth;W_min;USD;parameter;global;wealth;numeric;30;27;33;30;30
 time-horizon;T_h;years;parameter;global;capital;numeric;10;9;11;NA;10
 discount-rate;disc_r;-;parameter;global;capital;numeric;0.1;0.09;0.11;NA;0.1
 land_price;p_L;USD/ha;parameter;global;capital;numeric;750;675;825;750;750
-external_income;Y_~;USD;parameter;global;capital;numeric;500;450;550;500;500
-rent_rate_capital_lend;r_K_l;-;parameter;global;capital;numeric;0.08;0.072;0.088;NA;NA
+external_income;Y;USD;parameter;global;capital;numeric;500;450;550;500;500
+rent_rate_capital_lend;r_K,l;-;parameter;global;capital;numeric;0.08;0.072;0.088;NA;NA
 rent_rate_capital_borrow;r_K;-;parameter;global;capital;numeric;0.15;0.135;0.165;0.1;0.1
 rent_rate_land;r_L;-;parameter;global;capital;numeric;0.1;0.09;0.11;0.1;0.1
 l_depriciation_rate_young_lut-0;d_o2;-;parameter;global;capital;numeric;-0.1;-0.11;-0.09;-0.1;-0.1
@@ -92,31 +92,31 @@ l_max_age_lut-1;maxage_r;years;parameter;global;capital;numeric;30;27;33;40;30
 dynamic-costs?;NA;NA;parameter;global;capital;numeric;FALSE;NA;NA;NA;NA
 carbon_ncinv;NA;NA;parameter;global;carbon_ncinv;string;"""ncinv-carbon""";NA;NA;NA;NA
 sensitivity?;NA;NA;parameter;global;sensitivity;boolean;TRUE;NA;NA;NA;NA
-c_forest-agb;CB_a_f;tons/ha;parameter;global;carbon_ncinv;numeric;89.4;80.46;98.34;NA;NA
-c_forest-bgb;CB_b_f;tons/ha;parameter;global;carbon_ncinv;numeric;44.7;40.23;49.17;NA;NA
-c_forest-soc;CB_s_f;tons/ha;parameter;global;carbon_ncinv;numeric;128.79;115.911;141.669;NA;NA
-c_forest-dead;CB_d_f;tons/ha;parameter;global;carbon_ncinv;numeric;18.123;16.311;19.935;NA;NA
-c_lut-0-agb;CB_a_o;tons/ha;parameter;global;carbon_ncinv;numeric;49.01;44.109;53.911;NA;NA
-c_lut-0-bgb;CB_b_o;tons/ha;parameter;global;carbon_ncinv;numeric;24.51;22.059;26.961;NA;NA
-c_lut-0-soc;CB_s_o;tons/ha;parameter;global;carbon_ncinv;numeric;121.55;109.395;133.705;NA;NA
-c_lut-0-dead;CB_d_o;tons/ha;parameter;global;carbon_ncinv;numeric;3.18;2.862;3.498;NA;NA
-c_lut-1-agb;CB_a_r;tons/ha;parameter;global;carbon_ncinv;numeric;37.57;33.813;41.327;NA;NA
-c_lut-1-bgb;CB_b_r;tons/ha;parameter;global;carbon_ncinv;numeric;18.79;16.911;20.669;NA;NA
-c_lut-1-soc;CB_s_r;tons/ha;parameter;global;carbon_ncinv;numeric;124.35;111.915;136.785;NA;NA
-c_lut-1-dead;CB_d_r;tons/ha;parameter;global;carbon_ncinv;numeric;4.52;4.068;4.972;NA;NA
+c_forest-agb;CB_a,f;tons/ha;parameter;global;carbon_ncinv;numeric;89.4;80.46;98.34;NA;NA
+c_forest-bgb;CB_b,f;tons/ha;parameter;global;carbon_ncinv;numeric;44.7;40.23;49.17;NA;NA
+c_forest-soc;CB_s,f;tons/ha;parameter;global;carbon_ncinv;numeric;128.79;115.911;141.669;NA;NA
+c_forest-dead;CB_d,f;tons/ha;parameter;global;carbon_ncinv;numeric;18.123;16.311;19.935;NA;NA
+c_lut-0-agb;CB_a,o;tons/ha;parameter;global;carbon_ncinv;numeric;49.01;44.109;53.911;NA;NA
+c_lut-0-bgb;CB_b,o;tons/ha;parameter;global;carbon_ncinv;numeric;24.51;22.059;26.961;NA;NA
+c_lut-0-soc;CB_s,o;tons/ha;parameter;global;carbon_ncinv;numeric;121.55;109.395;133.705;NA;NA
+c_lut-0-dead;CB_d,o;tons/ha;parameter;global;carbon_ncinv;numeric;3.18;2.862;3.498;NA;NA
+c_lut-1-agb;CB_a,r;tons/ha;parameter;global;carbon_ncinv;numeric;37.57;33.813;41.327;NA;NA
+c_lut-1-bgb;CB_b,r;tons/ha;parameter;global;carbon_ncinv;numeric;18.79;16.911;20.669;NA;NA
+c_lut-1-soc;CB_s,r;tons/ha;parameter;global;carbon_ncinv;numeric;124.35;111.915;136.785;NA;NA
+c_lut-1-dead;CB_d,r;tons/ha;parameter;global;carbon_ncinv;numeric;4.52;4.068;4.972;NA;NA
 ecol_interval;NA;NA;parameter;global;ecological;numeric;1;NA;NA;NA;NA
 biodiv_ncinv;NA;NA;parameter;global;biodiversity;string;"""habitatquality""";NA;NA;NA;NA
 ncinv_experiment;NA;NA;parameter;global;biodiversity;string;"""exp1""";NA;NA;NA;NA
 ncinv_test;NA;NA;parameter;global;biodiversity;string;"""test1""";NA;NA;NA;NA
 biodiv_ncinv_k;NA;NA;parameter;global;biodiversity;numeric;0.05;NA;NA;NA;NA
-hq_lut-0-max-dist;HQ_d_o;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
-hq_lut-1-max-dist;HQ_d_r;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
-hq_immature-lut-0-max-dist;HQ_d_im_o;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
-hq_immature-lut-1-max-dist;HQ_d_im_r;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
-hq_lut-0-weight;HQ_w_o;-;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
-hq_lut-1-weight;HQ_w_r;-;parameter;global;biodiversity;numeric;0.36;0.324;0.374;NA;NA
-hq_immature-lut-0-weight;HQ_w_im_o;-;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
-hq_immature-lut-1-weight;HQ_w_im_r;-;parameter;global;biodiversity;numeric;0.36;0.324;0.374;NA;NA
+hq_lut-0-max-dist;HQ_d,o;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_lut-1-max-dist;HQ_d,r;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_immature-lut-0-max-dist;HQ_d,im,o;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_immature-lut-1-max-dist;HQ_d,im,r;km;parameter;global;biodiversity;numeric;0.1;0.09;0.11;NA;NA
+hq_lut-0-weight;HQ_w,o;-;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
+hq_lut-1-weight;HQ_w,r;-;parameter;global;biodiversity;numeric;0.36;0.324;0.374;NA;NA
+hq_immature-lut-0-weight;HQ_w,im,o;-;parameter;global;biodiversity;numeric;0.64;0.576;0.704;NA;NA
+hq_immature-lut-1-weight;HQ_w,im,r;-;parameter;global;biodiversity;numeric;0.36;0.324;0.374;NA;NA
 hq_lut-0-decay;NA;-;parameter;global;biodiversity;string;"""linear""";NA;NA;NA;NA
 hq_lut-1-decay;NA;-;parameter;global;biodiversity;string;"""linear""";NA;NA;NA;NA
 hq_immature-lut-0-decay;NA;-;parameter;global;biodiversity;string;"""linear""";NA;NA;NA;NA
@@ -139,8 +139,8 @@ hq_lut0-limit3;NA;-;parameter;global;biodiversity;numeric;15;NA;NA;NA;NA
 hq_lut1-limit1;NA;-;parameter;global;biodiversity;numeric;5;NA;NA;NA;NA
 hq_lut1-limit2;NA;-;parameter;global;biodiversity;numeric;10;NA;NA;NA;NA
 hq_lut1-limit3;NA;-;parameter;global;biodiversity;numeric;15;NA;NA;NA;NA
-hq_lut-0-1-sens-lut-0;HQ_o_x_o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
-hq_lut-0-1-sens-lut-1;HQ_o_x_r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_lut-0-1-sens-lut-0;HQ_o,x,o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_lut-0-1-sens-lut-1;HQ_o,x,r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-1-sens-immature-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-1-sens-immature-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-2-sens-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
@@ -159,8 +159,8 @@ hq_lut-0-5-sens-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-5-sens-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-5-sens-immature-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-0-5-sens-immature-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
-hq_lut-1-1-sens-lut-0;HQ_r_x_o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
-hq_lut-1-1-sens-lut-1;HQ_r_x_r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_lut-1-1-sens-lut-0;HQ_r,x,o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_lut-1-1-sens-lut-1;HQ_r,x,r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-1-sens-immature-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-1-sens-immature-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-2-sens-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
@@ -179,8 +179,8 @@ hq_lut-1-5-sens-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-5-sens-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-5-sens-immature-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_lut-1-5-sens-immature-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
-hq_forest-sens-lut-0;HQ_f_x_o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
-hq_forest-sens-lut-1;HQ_f_x_r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_forest-sens-lut-0;HQ_f,x,o;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
+hq_forest-sens-lut-1;HQ_f,x,r;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_forest-sens-immature-lut-0;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 hq_forest-sens-immature-lut-1;NA;-;parameter;global;biodiversity;numeric;1;0.9;NA;NA;NA
 biodiv_birds;NA;NA;parameter;global;birdrichness;string;"""mahnken/koller""";NA;NA;NA;NA
@@ -190,19 +190,19 @@ bird_pbeetle;B_b;1/beetle species richness;parameter;global;birdrichness;numeric
 bird_pant;B_a;1/ant species richness;parameter;global;birdrichness;numeric;0.010402;0.0093618;0.0114422;NA;NA
 bird_plud;B_l;1/unit land use diversity;parameter;global;birdrichness;numeric;0.476163;0.4285467;0.5237793;NA;NA
 bird_pcanopy;B_c;1/unit canopy openness;parameter;global;birdrichness;numeric;2.20185;1.981665;2.422035;NA;NA
-bc_r-intercept;P_0_r;number;parameter;global;biocontrol;numeric;0.307045;0.2763405;0.3377495;NA;NA
-bc_r-pzmax;P_z_r;1/m;parameter;global;biocontrol;numeric;-0.051988;-0.0571868;-0.0467892;NA;NA
-bc_r-prubber;P_r_r;1/rubber proportion;parameter;global;biocontrol;numeric;0.006531;0.0058779;0.0071841;NA;NA
-bc_r-pshdi;P_s_r;1/unit shannon diversity index;parameter;global;biocontrol;numeric;-0.675094;-0.7426034;-0.6075846;NA;NA
-bc_op-intercept;P_0_o;-;parameter;global;biocontrol;numeric;0.761321;0.6851889;0.8374531;NA;NA
-bc_op-pzmax;P_z_o;1/m;parameter;global;biocontrol;numeric;-0.114749;-0.1262239;-0.1032741;NA;NA
-bc_op-prubber;P_r_o;1/rubber proportion;parameter;global;biocontrol;numeric;0.005093;0.0045837;0.0056023;NA;NA
-bc_op-pforest;P_f_o;1/forest proportion;parameter;global;biocontrol;numeric;-0.016152;-0.0177672;-0.0145368;NA;NA
-bc_op-ped;P_e_o;1/m * m2;parameter;global;biocontrol;numeric;-66.190439;-72.8094829;-59.5713951;NA;NA
-bc_r-zmax-intercept;P_z1_o;-;parameter;global;biocontrol;numeric;11.99827;10.798443;13.198097;NA;NA
-bc_r-zmax-page;P_z2_o;1/year;parameter;global;biocontrol;numeric;0.46252;0.416268;0.508772;NA;NA
-bc_op-zmax-intercept;P_z1_r;-;parameter;global;biocontrol;numeric;7.33052;6.597468;8.063572;NA;NA
-bc_op-zmax-page;P_z2_r;1/year;parameter;global;biocontrol;numeric;0.43109;0.387981;0.474199;NA;NA
+bc_r-intercept;P_0,r;number;parameter;global;biocontrol;numeric;0.307045;0.2763405;0.3377495;NA;NA
+bc_r-pzmax;P_z,r;1/m;parameter;global;biocontrol;numeric;-0.051988;-0.0571868;-0.0467892;NA;NA
+bc_r-prubber;P_r,r;1/rubber proportion;parameter;global;biocontrol;numeric;0.006531;0.0058779;0.0071841;NA;NA
+bc_r-pshdi;P_s,r;1/unit shannon diversity index;parameter;global;biocontrol;numeric;-0.675094;-0.7426034;-0.6075846;NA;NA
+bc_op-intercept;P_0,o;-;parameter;global;biocontrol;numeric;0.761321;0.6851889;0.8374531;NA;NA
+bc_op-pzmax;P_z,o;1/m;parameter;global;biocontrol;numeric;-0.114749;-0.1262239;-0.1032741;NA;NA
+bc_op-prubber;P_r,o;1/rubber proportion;parameter;global;biocontrol;numeric;0.005093;0.0045837;0.0056023;NA;NA
+bc_op-pforest;P_f,o;1/forest proportion;parameter;global;biocontrol;numeric;-0.016152;-0.0177672;-0.0145368;NA;NA
+bc_op-ped;P_e,o;1/m * m2;parameter;global;biocontrol;numeric;-66.190439;-72.8094829;-59.5713951;NA;NA
+bc_r-zmax-intercept;P_z1,o;-;parameter;global;biocontrol;numeric;11.99827;10.798443;13.198097;NA;NA
+bc_r-zmax-page;P_z2,o;1/year;parameter;global;biocontrol;numeric;0.46252;0.416268;0.508772;NA;NA
+bc_op-zmax-intercept;P_z1,r;-;parameter;global;biocontrol;numeric;7.33052;6.597468;8.063572;NA;NA
+bc_op-zmax-page;P_z2,r;1/year;parameter;global;biocontrol;numeric;0.43109;0.387981;0.474199;NA;NA
 hh_age_alpha;age_1;-;parameter;global;hhage;numeric;14.24;12.816;15.664;NA;NA
 hh_age_lambda;age_2;1/year;parameter;global;hhage;numeric;0.31;0.279;0.341;NA;NA
 hh_age_min;age_min;years;parameter;global;hhage;numeric;18;16;20;NA;NA
