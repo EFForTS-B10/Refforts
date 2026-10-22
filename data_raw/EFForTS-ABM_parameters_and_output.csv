@@ -12,7 +12,7 @@ LUT-0-price;p_o;USD/ton;parameter;global;prices;numeric;80;72;88;90;90
 LUT-0-price-mu;NA;NA;parameter;global;prices;numeric;1.9;NA;NA;NA;0
 LUT-0-price-sd;NA;NA;parameter;global;prices;numeric;10;NA;NA;NA;50
 LUT-1-folder;NA;NA;parameter;global;prices;string;"""rubber""";NA;NA;NA;NA
-LUT-1-price;p_r;USD/ton;parameter;global;prices;numeric;599,58;539,62;659,54;1100;1100
+LUT-1-price;p_r;USD/ton;parameter;global;prices;numeric;599.58;539.62;659.54;1100;1100
 LUT-1-price-mu;NA;NA;parameter;global;prices;numeric;11;NA;NA;NA;0
 LUT-1-price-sd;NA;NA;parameter;global;prices;numeric;100;NA;NA;NA;500
 l_mng_price_tinput_management-0;p_TI;USD/kg;parameter;global;costs;numeric;0.5;0.45;0.55;0.5;0.5
